@@ -3,13 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./js/owlcarousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="./js/owlcarousel/assets/owl.theme.default.min.css">
+    <link rel="icon" type="image/x-icon" href="./image/ico/favicon.ico" id="appIcon" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="/css/style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
-    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="./js/owlcarousel/owl.carousel.min.js"></script>
+    <script src="./js/carousel.js"></script>
+    <title>One sport</title>
 </head>
 
 <body>
@@ -740,7 +742,6 @@
                                 </span>
                             </div>
                         </div>
-
                         <div class="relative overflow-x-auto">
                             <table class="w-full text-left">
                                 <thead class="text-black cursor-auto">
@@ -904,7 +905,110 @@
                                 </tbody>
                             </table>
                         </div>
-
+                        <div class="flex items-center gap-[16px]">
+                            <div class="flex items-center gap-[12px]">
+                                <span class="rounded-full bg-[#5742A9] h-[12px] w-[12px]"></span>
+                                <span>Champions League</span>
+                            </div>
+                            <div class="flex items-center gap-[12px]">
+                                <span class="rounded-full bg-[#560617] h-[12px] w-[12px]"></span>
+                                <span>Europa League</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full h-[3px] bg-[#EFEFEF]"></div>
+                    <div class="space-y-[32px] cursor-pointer">
+                        <div class="flex items-center justify-between">
+                            <span class="font-semibold text-[20px]">🎮 Follow Club</span>
+                            <div class="flex items-center gap-[10px]">
+                                <span class="cursor-pointer" id="prev">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_93_75)">
+                                            <path
+                                                d="M7.828 10.9715L13.192 5.45436L11.778 4L4 12L11.778 20L13.192 18.5456L7.828 13.0285L20 13.0285V10.9715L7.828 10.9715Z"
+                                                fill="#A4A4A4" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_93_75">
+                                                <rect width="24" height="24" fill="white"
+                                                    transform="matrix(-1 0 0 1 24 0)" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </span>
+                                <button class="rotate-180 cursor-pointer" id="next">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_93_75)">
+                                            <path
+                                                d="M7.828 10.9715L13.192 5.45436L11.778 4L4 12L11.778 20L13.192 18.5456L7.828 13.0285L20 13.0285V10.9715L7.828 10.9715Z"
+                                                fill="#A4A4A4" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_93_75">
+                                                <rect width="24" height="24" fill="white"
+                                                    transform="matrix(-1 0 0 1 24 0)" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="h-[124px] relative">
+                            <!-- <div class="owl-carousel owl-theme">
+                                <div class="item">
+                                    <div
+                                        class="flex items-center justify-center w-[124px] h-[124px] bg-[#F6F6F6] rounded-full">
+                                        <img class="w-[64px] h-[64px]" src="./image/logo/Chelsea.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div
+                                        class="flex items-center justify-center w-[124px] h-[124px] bg-[#F6F6F6] rounded-full">
+                                        <img class="w-[64px] h-[64px]" src="./image/logo/Liverpool.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div
+                                        class="flex items-center justify-center w-[124px] h-[124px] bg-[#F6F6F6] rounded-full">
+                                        <img class="w-[64px] h-[64px]" src="./image/logo/Man_Utd.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div
+                                        class="flex items-center justify-center w-[124px] h-[124px] bg-[#F6F6F6] rounded-full">
+                                        <img class="w-[64px] h-[64px]" src="./image/logo/Manchester_City.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div
+                                        class="flex items-center justify-center w-[124px] h-[124px] bg-[#F6F6F6] rounded-full">
+                                        <img class="w-[64px] h-[64px]" src="./image/logo/Bayern_München.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div
+                                        class="flex items-center justify-center w-[124px] h-[124px] bg-[#F6F6F6] rounded-full">
+                                        <img class="w-[64px] h-[64px]" src="./image/logo/Burnley.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div
+                                        class="flex items-center justify-center w-[124px] h-[124px] bg-[#F6F6F6] rounded-full">
+                                        <img class="w-[64px] h-[64px]" src="./image/logo/Tottenham_Hotspurpng.png"
+                                            alt="">
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div
+                                        class="flex items-center justify-center w-[124px] h-[124px] bg-[#F6F6F6] rounded-full">
+                                        <img class="w-[64px] h-[64px]" src="./image/logo/Paris_Saint-Germain.png"
+                                            alt="">
+                                    </div>
+                                </div>
+                            </div> -->
+                        </div>
                     </div>
                 </div>
             </div>
