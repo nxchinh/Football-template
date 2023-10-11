@@ -16,54 +16,23 @@ table{border-collapse:collapse;border-spacing:0}
 hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}
 input,select{vertical-align:middle}
 
+.container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
 .owl-carousel {
     .owl-stage-outer {
-        .owl-stage {
-            .owl-item{
-                
-            }
-        }
+        margin: -15px;
+        // padding: 15px;
     }
 }
 
-// #slide {
-//     width: max-content;
-// }
-
-// .item {
-//     display: inline-block;
-//     transition: 1s;
-//     position: absolute;
-//     z-index: 1;
-// }
-
-// .item:nth-child(1) {
-//     transform: translate(70%);
-//     opacity: 0;
-// }
-// .item:nth-child(2) {
-//     transform: translate(70%);
-// }
-// .item:nth-child(3) {
-//     transform: translate(190%);
-// }
-// .item:nth-child(4) {
-//     transform: translate(320%);
-// }
-// .item:nth-child(5) {
-//     transform: translate(440%);
-// }
-// .item:nth-child(6) {
-//     transform: translate(565%);
-// }
-// .item:nth-child(7) {
-//     transform: translate(688%);
-// }
-// .item:nth-child(8) {
-//     transform: translate(813%);
-// }
-
-// .item:nth-child(n+9) {
-//     transform: translate(938%);
-//     opacity: 0;
-// }
+@media only screen and (min-width: 1536px) {
+    .container {
+        max-width: 1425px !important;
+    }
+}
