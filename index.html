@@ -8,7 +8,16 @@
     <link rel="stylesheet" href="./js/owlcarousel/assets/owl.theme.default.min.css">
     <link rel="icon" type="image/x-icon" href="./image/ico/favicon.ico" id="appIcon" />
     <script src="https://cdn.tailwindcss.com"></script>
-
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            variants: {
+                extend: {
+                    display: ['group-hover'],
+                },
+            },
+        }
+    </script>
     <title>One sport</title>
 </head>
 
@@ -16,7 +25,7 @@
     <main class="main">
         <div class="flex">
             <div class="flex">
-                <div class="w-[72px] py-[24px] flex items-center flex-col">
+                <div class="w-[72px] py-[24px] flex items-center flex-col dark:bg-[#14151B]">
                     <div class="mb-[72px] cursor-pointer">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_174_21)">
@@ -156,219 +165,249 @@
                         </div>
                     </div>
                 </div>
-                <div class="w-[285px] bg-[#F6F6F4] p-[24px] h-full">
+                <div class="w-[285px] bg-[#F6F6F4] p-[24px] h-full dark:bg-[#1B1C21]">
                     <div class="mb-[72px] flex gap-[8px] items-center">
                         <img src="./image/img/tvit.png" alt="tvit.png">
-                        <p class="mb-0 text-[18px]">Onesport</p>
+                        <p class="mb-0 text-[18px] dark:text-white">Onesport</p>
                     </div>
+                    <div class="text-[#636363] cursor-pointer dark:text-[#A4A4A4] mb-[32px]">MENU</div>
                     <div class="space-y-[32px]">
-                        <span class="text-[#636363] cursor-pointer">MENU</span>
-                        <div class="dashboard flex items-center gap-[16px] text-[#5742A9] cursor-pointer">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_174_68)">
-                                    <path
-                                        d="M13 21V11H21V21H13ZM3 13V3H11V13H3ZM9 11V5H5V11H9ZM3 21V15H11V21H3ZM5 19H9V17H5V19ZM15 19H19V13H15V19ZM13 3H21V9H13V3ZM15 5V7H19V5H15Z"
-                                        fill="#5742A9" />
-                                </g>
-                                <defs>
-                                    <clipPath id="clip0_174_68">
-                                        <rect width="24" height="24" fill="white" />
-                                    </clipPath>
-                                </defs>
-                            </svg>
-                            <span class="text-[16px]">Dashboard</span>
+                        <div class="group">
+                            <div
+                                class="flex items-center gap-[16px] text-[#636363] h-[40px] px-[10px] rounded-[16px] cursor-pointer dark:text-[#A4A4A4] text-[#5742A9] bg-[#E6E6E6] dark:text-[#F5C451] dark:bg-[#212227]">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_174_68)">
+                                        <path
+                                            d="M13 21V11H21V21H13ZM3 13V3H11V13H3ZM9 11V5H5V11H9ZM3 21V15H11V21H3ZM5 19H9V17H5V19ZM15 19H19V13H15V19ZM13 3H21V9H13V3ZM15 5V7H19V5H15Z"
+                                            fill="currentColor" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_174_68">
+                                            <rect width="24" height="24" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <span class="text-[16px]">Dashboard</span>
+                            </div>
                         </div>
-                        <div class="livefoodball flex items-center gap-[16px] text-[#636363] cursor-pointer">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_174_73)">
-                                    <path
-                                        d="M16 4C16.2652 4 16.5196 4.10536 16.7071 4.29289C16.8946 4.48043 17 4.73478 17 5V9.2L22.213 5.55C22.288 5.49746 22.3759 5.4665 22.4672 5.4605C22.5586 5.4545 22.6498 5.4737 22.731 5.51599C22.8122 5.55829 22.8802 5.62206 22.9276 5.70035C22.9751 5.77865 23.0001 5.86846 23 5.96V18.04C23.0001 18.1315 22.9751 18.2214 22.9276 18.2996C22.8802 18.3779 22.8122 18.4417 22.731 18.484C22.6498 18.5263 22.5586 18.5455 22.4672 18.5395C22.3759 18.5335 22.288 18.5025 22.213 18.45L17 14.8V19C17 19.2652 16.8946 19.5196 16.7071 19.7071C16.5196 19.8946 16.2652 20 16 20H2C1.73478 20 1.48043 19.8946 1.29289 19.7071C1.10536 19.5196 1 19.2652 1 19V5C1 4.73478 1.10536 4.48043 1.29289 4.29289C1.48043 4.10536 1.73478 4 2 4H16ZM15 6H3V18H15V6ZM7.4 8.829C7.47611 8.82879 7.55069 8.8503 7.615 8.891L11.97 11.663C12.0266 11.6992 12.0731 11.749 12.1054 11.8079C12.1376 11.8668 12.1545 11.9329 12.1545 12C12.1545 12.0671 12.1376 12.1332 12.1054 12.1921C12.0731 12.251 12.0266 12.3008 11.97 12.337L7.615 15.11C7.55434 15.1487 7.48438 15.1703 7.41248 15.1725C7.34059 15.1748 7.26941 15.1576 7.20646 15.1228C7.14351 15.088 7.0911 15.0368 7.05477 14.9747C7.01844 14.9127 6.99951 14.8419 7 14.77V9.23C7 9.009 7.18 8.83 7.4 8.83V8.829ZM21 8.84L17 11.64V12.358L21 15.158V8.84Z"
-                                        fill="#636363" />
-                                </g>
-                                <defs>
-                                    <clipPath id="clip0_174_73">
-                                        <rect width="24" height="24" fill="white" />
-                                    </clipPath>
-                                </defs>
-                            </svg>
-                            <span class="text-[16px]">Live Football</span>
+                        <div class="group">
+                            <div
+                                class="flex items-center gap-[16px] text-[#636363] h-[40px] px-[10px] rounded-[16px] cursor-pointer dark:text-[#A4A4A4] group-hover:text-[#5742A9] group-hover:bg-[#E6E6E6] dark:group-hover:text-[#F5C451] dark:group-hover:bg-[#212227]">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_174_73)">
+                                        <path
+                                            d="M16 4C16.2652 4 16.5196 4.10536 16.7071 4.29289C16.8946 4.48043 17 4.73478 17 5V9.2L22.213 5.55C22.288 5.49746 22.3759 5.4665 22.4672 5.4605C22.5586 5.4545 22.6498 5.4737 22.731 5.51599C22.8122 5.55829 22.8802 5.62206 22.9276 5.70035C22.9751 5.77865 23.0001 5.86846 23 5.96V18.04C23.0001 18.1315 22.9751 18.2214 22.9276 18.2996C22.8802 18.3779 22.8122 18.4417 22.731 18.484C22.6498 18.5263 22.5586 18.5455 22.4672 18.5395C22.3759 18.5335 22.288 18.5025 22.213 18.45L17 14.8V19C17 19.2652 16.8946 19.5196 16.7071 19.7071C16.5196 19.8946 16.2652 20 16 20H2C1.73478 20 1.48043 19.8946 1.29289 19.7071C1.10536 19.5196 1 19.2652 1 19V5C1 4.73478 1.10536 4.48043 1.29289 4.29289C1.48043 4.10536 1.73478 4 2 4H16ZM15 6H3V18H15V6ZM7.4 8.829C7.47611 8.82879 7.55069 8.8503 7.615 8.891L11.97 11.663C12.0266 11.6992 12.0731 11.749 12.1054 11.8079C12.1376 11.8668 12.1545 11.9329 12.1545 12C12.1545 12.0671 12.1376 12.1332 12.1054 12.1921C12.0731 12.251 12.0266 12.3008 11.97 12.337L7.615 15.11C7.55434 15.1487 7.48438 15.1703 7.41248 15.1725C7.34059 15.1748 7.26941 15.1576 7.20646 15.1228C7.14351 15.088 7.0911 15.0368 7.05477 14.9747C7.01844 14.9127 6.99951 14.8419 7 14.77V9.23C7 9.009 7.18 8.83 7.4 8.83V8.829ZM21 8.84L17 11.64V12.358L21 15.158V8.84Z"
+                                            fill="currentColor" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_174_73">
+                                            <rect width="24" height="24" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <span class="text-[16px]">Live Football</span>
+                            </div>
                         </div>
-                        <div class="standings flex items-center gap-[16px] text-[#636363] cursor-pointer">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_174_78)">
-                                    <path
-                                        d="M19 3L23 8H20V20H18V8H15L19 3ZM14 18V20H3V18H14ZM14 11V13H3V11H14ZM12 4V6H3V4H12Z"
-                                        fill="#636363" />
-                                </g>
-                                <defs>
-                                    <clipPath id="clip0_174_78">
-                                        <rect width="24" height="24" fill="white" />
-                                    </clipPath>
-                                </defs>
-                            </svg>
 
-                            <span class="text-[16px]">Standings</span>
-                        </div>
-                        <div class="flex items-center gap-[16px] text-[#636363] cursor-pointer">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_174_83)">
-                                    <path
-                                        d="M12.4 13.533L17.4 20.2C17.4557 20.2743 17.4897 20.3626 17.498 20.4551C17.5063 20.5476 17.4888 20.6406 17.4472 20.7236C17.4057 20.8067 17.3419 20.8765 17.2629 20.9253C17.1839 20.9741 17.0929 21 17 21H7.00002C6.90716 21 6.81614 20.9741 6.73715 20.9253C6.65816 20.8765 6.59433 20.8067 6.5528 20.7236C6.51128 20.6406 6.4937 20.5476 6.50204 20.4551C6.51038 20.3626 6.5443 20.2743 6.60002 20.2L11.6 13.533C11.6466 13.4709 11.707 13.4205 11.7764 13.3858C11.8458 13.3511 11.9224 13.333 12 13.333C12.0776 13.333 12.1542 13.3511 12.2236 13.3858C12.2931 13.4205 12.3534 13.4709 12.4 13.533ZM18 19V17H20V5H4.00002V17H6.00002V19H2.99202C2.86115 18.9997 2.73161 18.9736 2.61085 18.9232C2.4901 18.8727 2.38049 18.7989 2.28832 18.706C2.19615 18.6131 2.12324 18.5029 2.07376 18.3818C2.02429 18.2606 1.99923 18.1309 2.00002 18V4C2.00002 3.448 2.45502 3 2.99202 3H21.008C21.556 3 22 3.445 22 4V18C22 18.552 21.545 19 21.008 19H18Z"
-                                        fill="#636363" />
-                                </g>
-                                <defs>
-                                    <clipPath id="clip0_174_83">
-                                        <rect width="24" height="24" fill="white" />
-                                    </clipPath>
-                                </defs>
-                            </svg>
+                        <div class="group">
+                            <div
+                                class="flex items-center gap-[16px] text-[#636363] h-[40px] px-[10px] rounded-[16px] cursor-pointer dark:text-[#A4A4A4] group-hover:text-[#5742A9] group-hover:bg-[#E6E6E6] dark:group-hover:text-[#F5C451] dark:group-hover:bg-[#212227]">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_174_78)">
+                                        <path
+                                            d="M19 3L23 8H20V20H18V8H15L19 3ZM14 18V20H3V18H14ZM14 11V13H3V11H14ZM12 4V6H3V4H12Z"
+                                            fill="currentColor" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_174_78">
+                                            <rect width="24" height="24" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
 
-
-                            <span class="text-[16px]">Highlights</span>
+                                <span class="text-[16px]">Standings</span>
+                            </div>
                         </div>
-                        <div class="flex items-center gap-[16px] text-[#636363] cursor-pointer">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_174_88)">
-                                    <path
-                                        d="M20.998 13.242V20H21.9979V22H1.9999V20H2.9998V13.242C2.38423 12.8311 1.87962 12.2745 1.53077 11.6218C1.18191 10.969 0.999592 10.2402 1 9.5C1 8.673 1.22398 7.876 1.63294 7.197L4.34466 2.5C4.43242 2.34798 4.55864 2.22175 4.71064 2.13398C4.86264 2.04621 5.03506 2 5.21057 2H18.7882C18.9637 2 19.1361 2.04621 19.2881 2.13398C19.4401 2.22175 19.5664 2.34798 19.6541 2.5L22.3558 7.182C22.9523 8.17287 23.1441 9.35553 22.8912 10.4841C22.6383 11.6127 21.9602 12.6005 20.998 13.242ZM18.9982 13.972C18.3107 14.0491 17.6147 13.9665 16.9643 13.7307C16.3139 13.4948 15.7268 13.1119 15.2486 12.612C14.8288 13.0511 14.3244 13.4005 13.7659 13.6393C13.2074 13.878 12.6063 14.001 11.9989 14.001C11.3916 14.0013 10.7906 13.8786 10.2321 13.6402C9.67357 13.4018 9.16913 13.0527 8.74922 12.614C8.27089 13.1138 7.6837 13.4964 7.03334 13.7321C6.38299 13.9678 5.68701 14.0503 4.9996 13.973V20H18.9982V13.973V13.972ZM5.78852 4L3.35576 8.213C3.11936 8.79714 3.11227 9.44903 3.3359 10.0382C3.55952 10.6273 3.99738 11.1103 4.56182 11.3904C5.12627 11.6705 5.77566 11.7271 6.38004 11.5488C6.98441 11.3706 7.49918 10.9706 7.82131 10.429C8.15628 9.592 9.34116 9.592 9.67712 10.429C9.8624 10.8934 10.1827 11.2916 10.5966 11.5721C11.0104 11.8526 11.4989 12.0025 11.9989 12.0025C12.4989 12.0025 12.9873 11.8526 13.4012 11.5721C13.8151 11.2916 14.1354 10.8934 14.3207 10.429C14.6556 9.592 15.8405 9.592 16.1765 10.429C16.3062 10.7484 16.5007 11.0376 16.7475 11.2783C16.9944 11.519 17.2884 11.706 17.611 11.8275C17.9337 11.9491 18.278 12.0026 18.6223 11.9847C18.9666 11.9668 19.3034 11.8778 19.6117 11.7234C19.92 11.569 20.193 11.3525 20.4136 11.0875C20.6342 10.8225 20.7975 10.5148 20.8935 10.1836C20.9894 9.85238 21.0157 9.50493 20.9709 9.16305C20.9261 8.82118 20.8111 8.49227 20.633 8.197L18.2083 4H5.78952H5.78852Z"
-                                        fill="#636363" />
-                                </g>
-                                <defs>
-                                    <clipPath id="clip0_174_88">
-                                        <rect width="24" height="24" fill="white" />
-                                    </clipPath>
-                                </defs>
-                            </svg>
+                        <div class="group">
+                            <div
+                                class="flex items-center gap-[16px] text-[#636363] h-[40px] px-[10px] rounded-[16px] cursor-pointer dark:text-[#A4A4A4] group-hover:text-[#5742A9] group-hover:bg-[#E6E6E6] dark:group-hover:text-[#F5C451] dark:group-hover:bg-[#212227]">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_174_83)">
+                                        <path
+                                            d="M12.4 13.533L17.4 20.2C17.4557 20.2743 17.4897 20.3626 17.498 20.4551C17.5063 20.5476 17.4888 20.6406 17.4472 20.7236C17.4057 20.8067 17.3419 20.8765 17.2629 20.9253C17.1839 20.9741 17.0929 21 17 21H7.00002C6.90716 21 6.81614 20.9741 6.73715 20.9253C6.65816 20.8765 6.59433 20.8067 6.5528 20.7236C6.51128 20.6406 6.4937 20.5476 6.50204 20.4551C6.51038 20.3626 6.5443 20.2743 6.60002 20.2L11.6 13.533C11.6466 13.4709 11.707 13.4205 11.7764 13.3858C11.8458 13.3511 11.9224 13.333 12 13.333C12.0776 13.333 12.1542 13.3511 12.2236 13.3858C12.2931 13.4205 12.3534 13.4709 12.4 13.533ZM18 19V17H20V5H4.00002V17H6.00002V19H2.99202C2.86115 18.9997 2.73161 18.9736 2.61085 18.9232C2.4901 18.8727 2.38049 18.7989 2.28832 18.706C2.19615 18.6131 2.12324 18.5029 2.07376 18.3818C2.02429 18.2606 1.99923 18.1309 2.00002 18V4C2.00002 3.448 2.45502 3 2.99202 3H21.008C21.556 3 22 3.445 22 4V18C22 18.552 21.545 19 21.008 19H18Z"
+                                            fill="currentColor" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_174_83">
+                                            <rect width="24" height="24" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
 
 
-                            <span class="text-[16px]">Shop</span>
+                                <span class="text-[16px]">Highlights</span>
+                            </div>
                         </div>
-                        <div class="flex items-center gap-[16px] text-[#636363] cursor-pointer">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_174_93)">
-                                    <path
-                                        d="M20 22H4C3.73478 22 3.48043 21.8946 3.29289 21.7071C3.10536 21.5196 3 21.2652 3 21V3C3 2.73478 3.10536 2.48043 3.29289 2.29289C3.48043 2.10536 3.73478 2 4 2H20C20.2652 2 20.5196 2.10536 20.7071 2.29289C20.8946 2.48043 21 2.73478 21 3V21C21 21.2652 20.8946 21.5196 20.7071 21.7071C20.5196 21.8946 20.2652 22 20 22ZM19 20V4H5V20H19ZM7 6H11V10H7V6ZM7 12H17V14H7V12ZM7 16H17V18H7V16ZM13 7H17V9H13V7Z"
-                                        fill="#636363" />
-                                </g>
-                                <defs>
-                                    <clipPath id="clip0_174_93">
-                                        <rect width="24" height="24" fill="white" />
-                                    </clipPath>
-                                </defs>
-                            </svg>
 
-                            <span class="text-[16px]">News</span>
+                        <div class="group">
+                            <div
+                                class="flex items-center gap-[16px] text-[#636363] h-[40px] px-[10px] rounded-[16px] cursor-pointer dark:text-[#A4A4A4] group-hover:text-[#5742A9] group-hover:bg-[#E6E6E6] dark:group-hover:text-[#F5C451] dark:group-hover:bg-[#212227]">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_174_88)">
+                                        <path
+                                            d="M20.998 13.242V20H21.9979V22H1.9999V20H2.9998V13.242C2.38423 12.8311 1.87962 12.2745 1.53077 11.6218C1.18191 10.969 0.999592 10.2402 1 9.5C1 8.673 1.22398 7.876 1.63294 7.197L4.34466 2.5C4.43242 2.34798 4.55864 2.22175 4.71064 2.13398C4.86264 2.04621 5.03506 2 5.21057 2H18.7882C18.9637 2 19.1361 2.04621 19.2881 2.13398C19.4401 2.22175 19.5664 2.34798 19.6541 2.5L22.3558 7.182C22.9523 8.17287 23.1441 9.35553 22.8912 10.4841C22.6383 11.6127 21.9602 12.6005 20.998 13.242ZM18.9982 13.972C18.3107 14.0491 17.6147 13.9665 16.9643 13.7307C16.3139 13.4948 15.7268 13.1119 15.2486 12.612C14.8288 13.0511 14.3244 13.4005 13.7659 13.6393C13.2074 13.878 12.6063 14.001 11.9989 14.001C11.3916 14.0013 10.7906 13.8786 10.2321 13.6402C9.67357 13.4018 9.16913 13.0527 8.74922 12.614C8.27089 13.1138 7.6837 13.4964 7.03334 13.7321C6.38299 13.9678 5.68701 14.0503 4.9996 13.973V20H18.9982V13.973V13.972ZM5.78852 4L3.35576 8.213C3.11936 8.79714 3.11227 9.44903 3.3359 10.0382C3.55952 10.6273 3.99738 11.1103 4.56182 11.3904C5.12627 11.6705 5.77566 11.7271 6.38004 11.5488C6.98441 11.3706 7.49918 10.9706 7.82131 10.429C8.15628 9.592 9.34116 9.592 9.67712 10.429C9.8624 10.8934 10.1827 11.2916 10.5966 11.5721C11.0104 11.8526 11.4989 12.0025 11.9989 12.0025C12.4989 12.0025 12.9873 11.8526 13.4012 11.5721C13.8151 11.2916 14.1354 10.8934 14.3207 10.429C14.6556 9.592 15.8405 9.592 16.1765 10.429C16.3062 10.7484 16.5007 11.0376 16.7475 11.2783C16.9944 11.519 17.2884 11.706 17.611 11.8275C17.9337 11.9491 18.278 12.0026 18.6223 11.9847C18.9666 11.9668 19.3034 11.8778 19.6117 11.7234C19.92 11.569 20.193 11.3525 20.4136 11.0875C20.6342 10.8225 20.7975 10.5148 20.8935 10.1836C20.9894 9.85238 21.0157 9.50493 20.9709 9.16305C20.9261 8.82118 20.8111 8.49227 20.633 8.197L18.2083 4H5.78952H5.78852Z"
+                                            fill="currentColor" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_174_88">
+                                            <rect width="24" height="24" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+
+
+                                <span class="text-[16px]">Shop</span>
+                            </div>
                         </div>
-                        <div class="flex justify-between items-center text-[#636363] cursor-pointer uppercase">
-                            <span>Football League</span>
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_174_99)">
-                                    <path
-                                        d="M12.5 13.0913L17.5558 8L19 9.45436L12.5 16L6 9.45436L7.44422 8L12.5 13.0913Z"
-                                        fill="#636363" />
-                                </g>
-                                <defs>
-                                    <clipPath id="clip0_174_99">
-                                        <rect width="24" height="24" fill="white" />
-                                    </clipPath>
-                                </defs>
-                            </svg>
+
+                        <div class="group">
+                            <div
+                                class="flex items-center gap-[16px] text-[#636363] h-[40px] px-[10px] rounded-[16px] cursor-pointer dark:text-[#A4A4A4] group-hover:text-[#5742A9] group-hover:bg-[#E6E6E6] dark:group-hover:text-[#F5C451] dark:group-hover:bg-[#212227]">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_174_93)">
+                                        <path
+                                            d="M20 22H4C3.73478 22 3.48043 21.8946 3.29289 21.7071C3.10536 21.5196 3 21.2652 3 21V3C3 2.73478 3.10536 2.48043 3.29289 2.29289C3.48043 2.10536 3.73478 2 4 2H20C20.2652 2 20.5196 2.10536 20.7071 2.29289C20.8946 2.48043 21 2.73478 21 3V21C21 21.2652 20.8946 21.5196 20.7071 21.7071C20.5196 21.8946 20.2652 22 20 22ZM19 20V4H5V20H19ZM7 6H11V10H7V6ZM7 12H17V14H7V12ZM7 16H17V18H7V16ZM13 7H17V9H13V7Z"
+                                            fill="currentColor" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_174_93">
+                                            <rect width="24" height="24" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+
+                                <span class="text-[16px]">News</span>
+                            </div>
                         </div>
-                        <div class="flex items-center gap-[16px] text-[#636363] cursor-pointer">
+                        <div class="group">
+                            <div
+                                class="flex justify-between items-center text-[#636363] cursor-pointer uppercase  group-hover:text-[#5742A9]dark:text-[#A4A4A4] dark:group-hover:text-[#F5C451]">
+                                <span>Football League</span>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_174_99)">
+                                        <path
+                                            d="M12.5 13.0913L17.5558 8L19 9.45436L12.5 16L6 9.45436L7.44422 8L12.5 13.0913Z"
+                                            fill="currentColor" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_174_99">
+                                            <rect width="24" height="24" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-[16px] text-[#636363] cursor-pointer dark:text-white">
                             <img src="./image/img/worlcup.png" alt="worlcup.png">
                             <span class="text-[16px]">Worldcup Qatar 2022</span>
                         </div>
-                        <div class="flex items-center gap-[16px] text-[#636363] cursor-pointer">
+                        <div class="flex items-center gap-[16px] text-[#636363] cursor-pointer dark:text-white">
                             <img src="./image/img/C1.png" alt="worlcup.png">
                             <span class="text-[16px]">Champions League</span>
                         </div>
-                        <div class="flex items-center gap-[16px] text-[#636363] cursor-pointer">
+                        <div class="flex items-center gap-[16px] text-[#636363] cursor-pointer dark:text-white">
                             <img src="./image/img/premier.png" alt="worlcup.png">
                             <span class="text-[16px]">Premier League</span>
                         </div>
-                        <div class="flex items-center gap-[16px] text-[#636363] cursor-pointer">
+                        <div class="flex items-center gap-[16px] text-[#636363] cursor-pointer dark:text-white">
                             <img src="./image/img/laliga.png" alt="worlcup.png">
                             <span class="text-[16px]">La Liga</span>
                         </div>
-                        <div class="flex items-center gap-[16px] text-[#636363] cursor-pointer">
+                        <div class="flex items-center gap-[16px] text-[#636363] cursor-pointer dark:text-white">
                             <img src="./image/img/ligue1.png" alt="worlcup.png">
                             <span class="text-[16px]">Ligue 1</span>
                         </div>
-                        <div class="text-[#636363] uppercase">
+                        <div class="text-[#636363] uppercase dark:text-[#A4A4A4]">
                             Favorite club
                         </div>
                         <div class="flex items-center gap-[16px] text-[#636363] cursor-pointer">
                             <img src="./image/img/chelsea.png" alt="worlcup.png">
                             <div class="flex items-center justify-between w-full">
-                                <span class="text-[16px]">Chelsea FC</span>
-                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <g clip-path="url(#clip0_174_131)">
-                                        <path
-                                            d="M7.5 11.4538L2.86515 14L3.90016 8.88705L0 5.34771L5.27491 4.73374L7.5 0L9.72509 4.73374L15 5.34771L11.0998 8.88705L12.1348 14L7.5 11.4538Z"
-                                            fill="#5742A9" />
-                                    </g>
-                                    <defs>
-                                        <clipPath id="clip0_174_131">
-                                            <rect width="16" height="16" fill="white" />
-                                        </clipPath>
-                                    </defs>
-                                </svg>
+                                <span class="text-[16px] dark:text-white">Chelsea FC</span>
+                                <div class="text-[#5742A9] dark:text-[#F5C451]">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_174_131)">
+                                            <path
+                                                d="M7.5 11.4538L2.86515 14L3.90016 8.88705L0 5.34771L5.27491 4.73374L7.5 0L9.72509 4.73374L15 5.34771L11.0998 8.88705L12.1348 14L7.5 11.4538Z"
+                                                fill="currentColor" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_174_131">
+                                                <rect width="16" height="16" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </div>
                             </div>
                         </div>
                         <div class="flex items-center gap-[16px] text-[#636363] cursor-pointer">
                             <img src="./image/img/mancherter-city.png" alt="worlcup.png">
                             <div class="flex items-center justify-between w-full">
-                                <span class="text-[16px]">Manchester City</span>
-                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <g clip-path="url(#clip0_174_131)">
-                                        <path
-                                            d="M7.5 11.4538L2.86515 14L3.90016 8.88705L0 5.34771L5.27491 4.73374L7.5 0L9.72509 4.73374L15 5.34771L11.0998 8.88705L12.1348 14L7.5 11.4538Z"
-                                            fill="#5742A9" />
-                                    </g>
-                                    <defs>
-                                        <clipPath id="clip0_174_131">
-                                            <rect width="16" height="16" fill="white" />
-                                        </clipPath>
-                                    </defs>
-                                </svg>
+                                <span class="text-[16px] dark:text-white">Manchester City</span>
+                                <div class="text-[#5742A9] dark:text-[#F5C451]">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_174_131)">
+                                            <path
+                                                d="M7.5 11.4538L2.86515 14L3.90016 8.88705L0 5.34771L5.27491 4.73374L7.5 0L9.72509 4.73374L15 5.34771L11.0998 8.88705L12.1348 14L7.5 11.4538Z"
+                                                fill="currentColor" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_174_131">
+                                                <rect width="16" height="16" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </div>
                             </div>
                         </div>
                         <div class="flex items-center gap-[16px] text-[#636363] cursor-pointer">
                             <img src="./image/img/bayern-munchen.png" alt="worlcup.png">
                             <div class="flex items-center justify-between w-full">
-                                <span class="text-[16px]">Bayern Munchen</span>
-                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <g clip-path="url(#clip0_174_131)">
-                                        <path
-                                            d="M7.5 11.4538L2.86515 14L3.90016 8.88705L0 5.34771L5.27491 4.73374L7.5 0L9.72509 4.73374L15 5.34771L11.0998 8.88705L12.1348 14L7.5 11.4538Z"
-                                            fill="#5742A9" />
-                                    </g>
-                                    <defs>
-                                        <clipPath id="clip0_174_131">
-                                            <rect width="16" height="16" fill="white" />
-                                        </clipPath>
-                                    </defs>
-                                </svg>
+                                <span class="text-[16px] dark:text-white">Bayern Munchen</span>
+                                <div class="text-[#5742A9] dark:text-[#F5C451]">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_174_131)">
+                                            <path
+                                                d="M7.5 11.4538L2.86515 14L3.90016 8.88705L0 5.34771L5.27491 4.73374L7.5 0L9.72509 4.73374L15 5.34771L11.0998 8.88705L12.1348 14L7.5 11.4538Z"
+                                                fill="currentColor" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_174_131">
+                                                <rect width="16" height="16" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </div>
                             </div>
 
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="bg-[#F6F6F4] w-full">
-                <div class="w-full h-[68px] flex gap-[10px] items-center flex-nowrap  p-[16px_24px]">
+            <div class="bg-[#F6F6F4] flex-1 w-[calc(100%-357px)]">
+                <div class="w-full h-[68px] flex gap-[10px] items-center flex-nowrap  p-[16px_24px] dark:bg-[#1B1C21]">
                     <div class="w-[550px] relative">
-                        <span class="absolute left-0 p-[8px] cursor-pointer" (click)="onSearchChange()">
+                        <span class="absolute left-0 p-[8px] cursor-pointer">
                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <g clip-path="url(#clip0_171_290)">
@@ -384,21 +423,22 @@
                             </svg>
                         </span>
                         <input type="text"
-                            class="w-full h-[36px] rounded-[6px] px-[38px] bg-[#E6E6E6] focus:outline-none"
+                            class="w-full h-[36px] rounded-[6px] px-[38px] bg-[#E6E6E6] focus:outline-none dark:bg-[#2E3034] dark:text-[#A4A4A4]"
                             placeholder="Type to search..." />
                     </div>
                     <div class="flex items-center gap-[16px] ml-auto">
-                        <button class="h-[35px] px-3 py-1.5 rounded-[6px] bg-[#5742A9] text-white mr-[8px]"
+                        <button
+                            class="h-[35px] px-3 py-1.5 rounded-[6px] bg-[#5742A9] text-white mr-[8px] dark:bg-[#F5C451] dark:text-black"
                             [nzTooltipTitle]="'BTN.RESET' | transloco" [attr.keyLabel]="'BTN.RESET'" nz-tooltip>
                             Go Premium
                         </button>
-                        <div>
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        <div class="text-[#636363] dark:text-[#A4A4A4]">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <g clip-path="url(#clip0_171_297)">
                                     <path
                                         d="M12 2C13.5913 2 15.1174 2.63214 16.2426 3.75736C17.3679 4.88258 18 6.4087 18 8V9H22V11H20.833L20.076 20.083C20.0552 20.3329 19.9413 20.5658 19.7568 20.7357C19.5723 20.9055 19.3308 20.9999 19.08 21H4.92C4.66925 20.9999 4.4277 20.9055 4.24322 20.7357C4.05875 20.5658 3.94481 20.3329 3.924 20.083L3.166 11H2V9H6V8C6 6.4087 6.63214 4.88258 7.75736 3.75736C8.88258 2.63214 10.4087 2 12 2ZM18.826 11H5.173L5.84 19H18.159L18.826 11ZM13 13V17H11V13H13ZM9 13V17H7V13H9ZM17 13V17H15V13H17ZM12 4C10.9738 4 9.98677 4.39444 9.24319 5.10172C8.4996 5.80901 8.05631 6.77504 8.005 7.8L8 8V9H16V8C16 6.97376 15.6056 5.98677 14.8983 5.24319C14.191 4.4996 13.225 4.05631 12.2 4.005L12 4Z"
-                                        fill="#636363" />
+                                        fill="currentColor" />
                                 </g>
                                 <defs>
                                     <clipPath id="clip0_171_297">
@@ -407,13 +447,13 @@
                                 </defs>
                             </svg>
                         </div>
-                        <div>
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        <div class="text-[#636363] dark:text-[#A4A4A4]">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <g clip-path="url(#clip0_171_300)">
                                     <path
                                         d="M20 17H22V19H2V17H4V10C4 7.87827 4.84285 5.84344 6.34315 4.34315C7.84344 2.84285 9.87827 2 12 2C14.1217 2 16.1566 2.84285 17.6569 4.34315C19.1571 5.84344 20 7.87827 20 10V17ZM18 17V10C18 8.4087 17.3679 6.88258 16.2426 5.75736C15.1174 4.63214 13.5913 4 12 4C10.4087 4 8.88258 4.63214 7.75736 5.75736C6.63214 6.88258 6 8.4087 6 10V17H18ZM9 21H15V23H9V21Z"
-                                        fill="#636363" />
+                                        fill="currentColor" />
                                     <circle cx="17" cy="6" r="4.5" fill="#FF0000" stroke="#F6F6F4" />
                                 </g>
                                 <defs>
@@ -423,13 +463,13 @@
                                 </defs>
                             </svg>
                         </div>
-                        <div class="mr-[8px]">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        <div id="dark-mode-toggle" class="mr-[8px] cursor-pointer text-[#636363] dark:text-[#A4A4A4]">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <g clip-path="url(#clip0_171_304)">
                                     <path
                                         d="M12 18C10.4087 18 8.88258 17.3679 7.75736 16.2426C6.63214 15.1174 6 13.5913 6 12C6 10.4087 6.63214 8.88258 7.75736 7.75736C8.88258 6.63214 10.4087 6 12 6C13.5913 6 15.1174 6.63214 16.2426 7.75736C17.3679 8.88258 18 10.4087 18 12C18 13.5913 17.3679 15.1174 16.2426 16.2426C15.1174 17.3679 13.5913 18 12 18ZM12 16C13.0609 16 14.0783 15.5786 14.8284 14.8284C15.5786 14.0783 16 13.0609 16 12C16 10.9391 15.5786 9.92172 14.8284 9.17157C14.0783 8.42143 13.0609 8 12 8C10.9391 8 9.92172 8.42143 9.17157 9.17157C8.42143 9.92172 8 10.9391 8 12C8 13.0609 8.42143 14.0783 9.17157 14.8284C9.92172 15.5786 10.9391 16 12 16ZM11 1H13V4H11V1ZM11 20H13V23H11V20ZM3.515 4.929L4.929 3.515L7.05 5.636L5.636 7.05L3.515 4.93V4.929ZM16.95 18.364L18.364 16.95L20.485 19.071L19.071 20.485L16.95 18.364ZM19.071 3.514L20.485 4.929L18.364 7.05L16.95 5.636L19.071 3.515V3.514ZM5.636 16.95L7.05 18.364L4.929 20.485L3.515 19.071L5.636 16.95ZM23 11V13H20V11H23ZM4 11V13H1V11H4Z"
-                                        fill="#636363" />
+                                        fill="currentColor" />
                                 </g>
                                 <defs>
                                     <clipPath id="clip0_171_304">
@@ -443,81 +483,93 @@
                         </div>
                     </div>
                 </div>
-                <div class="p-[16px_24px]">
+                <div class="p-[16px_24px] dark:bg-[#212227]">
                     <div class="flex gap-[24px] flex-nowrap mb-[24px]">
-                        <div class="w-[1024px] rounded-[16px] shrink-0	">
+                        <div class="w-full max-w-[1024px] rounded-[16px] shrink-0">
                             <img class="w-full h-full object-cover rounded-[16px]" src="./image/img/banner.png" alt="">
                         </div>
-                        <div class="w-full p-[30px_22px] bg-white rounded-[16px] space-y-[50px]">
+                        <div class="w-full p-[30px_22px] bg-white rounded-[16px] space-y-[50px] dark:bg-[#1B1C21]">
                             <div class="text-center">
-                                <p class="mb-[6px] font-semibold">Live Match</p>
-                                <p class="mb-0 text-[#096A00]">62 : 24</p>
+                                <p class="mb-[6px] font-semibold dark:text-white">Live Match</p>
+                                <p class="mb-0 text-[#096A00] dark:text-[#14FF00]">62 : 24</p>
                             </div>
                             <div
-                                class="m-auto flex items-center justify-center w-[81px] h-[38px] rounded-[50px] text-[#5742A9] border border-[#000000] bg-[rgb(87,66,169,0.1)]">
+                                class="m-auto flex items-center justify-center w-[81px] h-[38px] rounded-[50px] text-[#5742A9] border border-[#000000] bg-[rgb(87,66,169,0.1)] dark:text-[#F5C451] dark:bg-[rgb(245,196,81,0.1)]">
                                 2 - 2
                             </div>
                             <div class="text-center">
-                                <span>Shoot on Target</span>
-                                <div class="flex gap-[10px] w-[300px] m-auto">
-                                    <div class="text-[#5742A9] w-full text-left">
+                                <span class="dark:text-white">Shoot on Target</span>
+                                <div class="flex gap-[10px] w-full max-w-[300px] m-auto">
+                                    <div class="text-[#5742A9] w-full text-left dark:text-[#F5C451]">
                                         <span>7</span>
                                         <div class="relative">
-                                            <div class="h-[4px] bg-[rgb(87,66,169,0.1)] rounded-[3px]"></div>
                                             <div
-                                                class="absolute h-[4px] bg-[#5742A9] rounded-[3px] w-[84px] top-0 right-0">
+                                                class="h-[4px] bg-[rgb(87,66,169,0.1)] rounded-[3px] dark:bg-[#3A3A3A]">
+                                            </div>
+                                            <div
+                                                class="absolute h-[4px] bg-[#5742A9] rounded-[3px] w-[84px] top-0 right-0 dark:bg-[#F5C451]">
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="text-[#560617] w-full text-right">
+                                    <div class="text-[#560617] w-full text-right dark:text-[#006AA9]">
                                         <span>3</span>
                                         <div class="relative">
-                                            <div class="h-[4px] bg-[rgb(86,6,23,0.1)] rounded-[3px]"></div>
-                                            <div class="absolute h-[4px] bg-[#560617] rounded-[3px] w-[40px] top-0">
+                                            <div class="h-[4px] bg-[rgb(86,6,23,0.1)] rounded-[3px] dark:bg-[#3A3A3A]">
+                                            </div>
+                                            <div
+                                                class="absolute h-[4px] bg-[#560617] rounded-[3px] w-[40px] top-0 dark:bg-[#006AA9]">
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="text-center">
-                                <span>Shoot</span>
-                                <div class="flex gap-[10px] w-[300px] m-auto">
-                                    <div class="text-[#5742A9] w-full text-left">
+                                <span class="dark:text-white">Shoot</span>
+                                <div class="flex gap-[10px] w-full max-w-[300px] m-auto">
+                                    <div class="text-[#5742A9] w-full text-left dark:text-[#F5C451]">
                                         <span>12</span>
                                         <div class="relative">
-                                            <div class="h-[4px] bg-[rgb(87,66,169,0.1)] rounded-[3px]"></div>
                                             <div
-                                                class="absolute h-[4px] bg-[#5742A9] rounded-[3px] w-[104px] top-0 right-0">
+                                                class="h-[4px] bg-[rgb(87,66,169,0.1)] rounded-[3px] dark:bg-[#3A3A3A]">
+                                            </div>
+                                            <div
+                                                class="absolute h-[4px] bg-[#5742A9] rounded-[3px] w-[104px] top-0 right-0 dark:bg-[#F5C451]">
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="text-[#560617] w-full text-right">
+                                    <div class="text-[#560617] w-full text-right dark:text-[#006AA9]">
                                         <span>7</span>
                                         <div class="relative">
-                                            <div class="h-[4px] bg-[rgb(86,6,23,0.1)] rounded-[3px]"></div>
-                                            <div class="absolute h-[4px] bg-[#560617] rounded-[3px] w-[65px] top-0">
+                                            <div class="h-[4px] bg-[rgb(86,6,23,0.1)] rounded-[3px] dark:bg-[#3A3A3A]">
+                                            </div>
+                                            <div
+                                                class="absolute h-[4px] bg-[#560617] rounded-[3px] w-[65px] top-0 dark:bg-[#006AA9]">
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="text-center">
-                                <span>Fouls</span>
-                                <div class="flex gap-[10px] w-[300px] m-auto">
-                                    <div class="text-[#5742A9] w-full text-left">
+                                <span class="dark:text-white">Fouls</span>
+                                <div class="flex gap-[10px] w-full max-w-[300px] m-auto">
+                                    <div class="text-[#5742A9] w-full text-left dark:text-[#F5C451]">
                                         <span>7</span>
                                         <div class="relative">
-                                            <div class="h-[4px] bg-[rgb(87,66,169,0.1)] rounded-[3px]"></div>
                                             <div
-                                                class="absolute h-[4px] bg-[#5742A9] rounded-[3px] w-[84px] top-0 right-0">
+                                                class="h-[4px] bg-[rgb(87,66,169,0.1)] rounded-[3px] dark:bg-[#3A3A3A]">
+                                            </div>
+                                            <div
+                                                class="absolute h-[4px] bg-[#5742A9] rounded-[3px] w-[84px] top-0 right-0 dark:bg-[#F5C451]">
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="text-[#560617] w-full text-right">
+                                    <div class="text-[#560617] w-full text-right dark:text-[#006AA9]">
                                         <span>3</span>
                                         <div class="relative">
-                                            <div class="h-[4px] bg-[rgb(86,6,23,0.1)] rounded-[3px]"></div>
-                                            <div class="absolute h-[4px] bg-[#560617] rounded-[3px] w-[40px] top-0">
+                                            <div class="h-[4px] bg-[rgb(86,6,23,0.1)] rounded-[3px] dark:bg-[#3A3A3A]">
+                                            </div>
+                                            <div
+                                                class="absolute h-[4px] bg-[#560617] rounded-[3px] w-[40px] top-0 dark:bg-[#006AA9]">
                                             </div>
                                         </div>
                                     </div>
@@ -525,15 +577,15 @@
                             </div>
                         </div>
                     </div>
-                    <div class="bg-white rounded-[16px] p-[24px] space-y-[48px]">
+                    <div class="bg-white rounded-[16px] p-[24px] space-y-[48px] dark:bg-[#212227]">
                         <section class="relative">
-                            <span class="font-semibold text-[20px]">⚽ Football Match</span>
+                            <span class="font-semibold text-[20px] dark:text-white">⚽ Football Match</span>
                             <div
                                 class="text-sm font-medium text-center text-[#A4A4A4] border-b border-gray-200 mb-[32px]">
                                 <ul class="flex flex-wrap -mb-px">
                                     <li class="mr-2">
                                         <a href="#"
-                                            class="inline-block p-4 border-b-2 border-[#5742A9] rounded-t-lg text-[16px] font-semibold active text-black"
+                                            class="inline-block p-4 border-b-2 border-[#5742A9] rounded-t-lg text-[16px] font-semibold active text-black dark:text-white"
                                             aria-current="page">Latest Match</a>
                                     </li>
                                     <li class="mr-2">
@@ -558,27 +610,28 @@
                                 </ul>
                             </div>
                             <div
-                                class="p-[16px_24px] w-full flex items-center justify-between bg-[#FBFBFB] rounded-[8px]">
+                                class="p-[16px_24px] w-full flex items-center justify-between bg-[#FBFBFB] rounded-[8px] dark:bg-[#1B1C21] dark:text-white">
                                 <div class="w-[462px] flex items-center gap-[32px] justify-between">
                                     <div class="flex gap-[15px] items-center w-full">
                                         <img src="./image/img/argentina.png" alt="argentina.png">
                                         <span>Argentina</span>
                                     </div>
                                     <div
-                                        class="flex items-center justify-center w-full rounded-[16px] text-[#5742A9] bg-[rgb(87,66,169,0.1)] h-[30px]">
+                                        class="flex items-center justify-center w-full rounded-[16px] text-[#5742A9] bg-[rgb(87,66,169,0.1)] h-[30px] dark:text-[#F5C451] dark:bg-[rgb(245,196,81,0.1)]">
                                         1 - 2</div>
                                     <div class="flex gap-[15px] items-center w-full justify-end">
                                         <span>Italy</span>
                                         <img src="./image/img/italy.png" alt="italy.png">
                                     </div>
                                 </div>
-                                <div class="text-[#FA0E0E] bg-[rgb(250,14,14,0.1)] p-[8px_16px] rounded-[8px]">
+                                <div
+                                    class="text-[#FA0E0E] bg-[rgb(250,14,14,0.1)] p-[8px_16px] rounded-[8px] dark:text-white dark:bg-[rgb(255,255,255,0.1)]">
                                     <span>Full - Time</span>
                                 </div>
                                 <div class="flex items-center gap-[16px]">
-                                    <span class="text-[#636363] mr-[24px]">18 December 2022</span>
+                                    <span class="text-[#636363] mr-[24px] dark:text-[#A4A4A4]">18 December 2022</span>
                                     <span class="cursor-pointer">
-                                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                        <svg width="25" height="25" viewBox="0 0 25 25" fill="currentColor"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <g clip-path="url(#clip0_183_372)">
                                                 <path
@@ -611,25 +664,27 @@
                                     </span>
                                 </div>
                             </div>
-                            <div class="p-[16px_24px] w-full flex items-center justify-between rounded-[8px]">
+                            <div
+                                class="p-[16px_24px] w-full flex items-center justify-between rounded-[8px] dark:text-white">
                                 <div class="w-[462px] flex items-center gap-[32px] justify-between">
                                     <div class="flex gap-[15px] items-center w-full">
                                         <img src="./image/img/portugal.png" alt="argentina.png">
                                         <span>Portugal</span>
                                     </div>
                                     <div
-                                        class="flex items-center justify-center w-full rounded-[16px] text-[#5742A9] bg-[rgb(87,66,169,0.1)] h-[30px]">
+                                        class="flex items-center justify-center w-full rounded-[16px] text-[#5742A9] bg-[rgb(87,66,169,0.1)] h-[30px] dark:text-[#F5C451] dark:bg-[rgb(245,196,81,0.1)]">
                                         2 - 3</div>
                                     <div class="flex gap-[15px] items-center w-full justify-end">
                                         <span>Belgium</span>
                                         <img src="./image/img/belgium.png" alt="italy.png">
                                     </div>
                                 </div>
-                                <div class="text-[#FA0E0E] bg-[rgb(250,14,14,0.1)] p-[8px_16px] rounded-[8px]">
+                                <div
+                                    class="text-[#FA0E0E] bg-[rgb(250,14,14,0.1)] p-[8px_16px] rounded-[8px] dark:text-white dark:bg-[rgb(255,255,255,0.1)]">
                                     <span>Full - Time</span>
                                 </div>
                                 <div class="flex items-center gap-[16px]">
-                                    <span class="text-[#636363] mr-[24px]">18 December 2022</span>
+                                    <span class="text-[#636363] mr-[24px] dark:text-[#A4A4A4]">18 December 2022</span>
                                     <span class="cursor-pointer">
                                         <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
@@ -665,25 +720,26 @@
                                 </div>
                             </div>
                             <div
-                                class="p-[16px_24px] w-full flex items-center justify-between bg-[#FBFBFB] rounded-[8px]">
+                                class="p-[16px_24px] w-full flex items-center justify-between bg-[#FBFBFB] rounded-[8px] dark:bg-[#1B1C21] dark:text-white">
                                 <div class="w-[462px] flex items-center gap-[32px] justify-between">
                                     <div class="flex gap-[15px] items-center w-full">
                                         <img src="./image/img/ghana.png" alt="argentina.png">
                                         <span>Ghana</span>
                                     </div>
                                     <div
-                                        class="flex items-center justify-center w-full rounded-[16px] text-[#5742A9] bg-[rgb(87,66,169,0.1)] h-[30px]">
+                                        class="flex items-center justify-center w-full rounded-[16px] text-[#5742A9] bg-[rgb(87,66,169,0.1)] h-[30px] dark:text-[#F5C451] dark:bg-[rgb(245,196,81,0.1)]">
                                         1 - 3</div>
                                     <div class="flex gap-[15px] items-center w-full justify-end">
                                         <span>Brazil</span>
                                         <img src="./image/img/brazil.png" alt="italy.png">
                                     </div>
                                 </div>
-                                <div class="text-[#FA0E0E] bg-[rgb(250,14,14,0.1)] p-[8px_16px] rounded-[8px]">
+                                <div
+                                    class="text-[#FA0E0E] bg-[rgb(250,14,14,0.1)] p-[8px_16px] rounded-[8px] dark:text-white dark:bg-[rgb(255,255,255,0.1)]">
                                     <span>Full - Time</span>
                                 </div>
                                 <div class="flex items-center gap-[16px]">
-                                    <span class="text-[#636363] mr-[24px]">17 December 2022</span>
+                                    <span class="text-[#636363] mr-[24px] dark:text-[#A4A4A4]">17 December 2022</span>
                                     <span class="cursor-pointer">
                                         <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
@@ -721,7 +777,7 @@
                         </section>
                         <div class="w-full h-[3px] bg-[#EFEFEF]"></div>
                         <section class="relative">
-                            <div class="space-y-[32px] cursor-pointer">
+                            <div class="space-y-[32px] cursor-pointer dark:text-white">
                                 <span class="font-semibold text-[20px]">🏆 Standings</span>
                                 <div class="flex items-center justify-between">
                                     <div class="flex items-center gap-[8px]">
@@ -732,16 +788,16 @@
                                             <img class="w-full h-full object-cover" src="./image/img/premier.png"
                                                 alt="premier.png">
                                         </div>
-                                        <span class="ml-[8px] text-black text-[19px]">
+                                        <span class="ml-[8px] text-black text-[19px] dark:text-white">
                                             Premier League
                                         </span>
-                                        <span>
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        <span class="text-[#636363] dark:text-white">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"
                                                 xmlns="http://www.w3.org/2000/svg">
                                                 <g clip-path="url(#clip0_174_99)">
                                                     <path
                                                         d="M12.5 13.0913L17.5558 8L19 9.45436L12.5 16L6 9.45436L7.44422 8L12.5 13.0913Z"
-                                                        fill="#636363" />
+                                                        fill="currentColor" />
                                                 </g>
                                                 <defs>
                                                     <clipPath id="clip0_174_99">
@@ -752,15 +808,15 @@
 
                                         </span>
                                     </div>
-                                    <div class="flex items-center gap-[10px]">
+                                    <div class="flex items-center gap-[10px] dark:text-[#A4A4A4]">
                                         <span>View All</span>
-                                        <span class="rotate-[270deg]">
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        <span class="text-[#636363] rotate-[270deg]">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"
                                                 xmlns="http://www.w3.org/2000/svg">
                                                 <g clip-path="url(#clip0_174_99)">
                                                     <path
                                                         d="M12.5 13.0913L17.5558 8L19 9.45436L12.5 16L6 9.45436L7.44422 8L12.5 13.0913Z"
-                                                        fill="#636363" />
+                                                        fill="currentColor" />
                                                 </g>
                                                 <defs>
                                                     <clipPath id="clip0_174_99">
@@ -772,10 +828,10 @@
                                     </div>
                                 </div>
                                 <div class="relative overflow-x-auto">
-                                    <table class="w-full text-left">
+                                    <table class="w-full text-left border-separate border-spacing-y-[8px]">
                                         <thead class="text-black cursor-auto">
-                                            <tr>
-                                                <th scope="col" class="px-6 py-3 text-[#636363]">
+                                            <tr class="dark:text-white">
+                                                <th scope="col" class="px-6 py-3 text-[#636363] dark:text-[#A4A4A4]">
                                                     Club
                                                 </th>
                                                 <th scope="col" class="px-6 py-3">
@@ -790,16 +846,15 @@
                                                 <th scope="col" class="px-6 py-3">
                                                     Poin
                                                 </th>
-                                                <th scope="col" class="px-6 py-3 text-[#636363]">
+                                                <th scope="col" class="px-6 py-3 text-[#636363] dark:text-[#A4A4A4]">
                                                     Last Match
                                                 </th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr
-                                                class="bg-[#F2F0F9] text-black border-b-[8px] border-white border-solid">
+                                            <tr class="bg-[#F2F0F9] text-black dark:bg-[#494069] dark:text-white">
                                                 <th scope="row"
-                                                    class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap flex items-center gap-[16px]">
+                                                    class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap flex items-center gap-[16px] dark:text-white">
                                                     <span>1</span>
                                                     <div class="w-[32px] h-[32px]">
                                                         <img class="w-full h-full object-cover"
@@ -842,10 +897,9 @@
                                                     </span>
                                                 </td>
                                             </tr>
-                                            <tr
-                                                class="bg-[#F2F0F9] text-black border-b-[8px] border-white border-solid">
+                                            <tr class="bg-[#F2F0F9] text-black dark:bg-[#494069] dark:text-white">
                                                 <th scope="row"
-                                                    class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap flex items-center gap-[16px]">
+                                                    class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap flex items-center gap-[16px] dark:text-white">
                                                     <span>2</span>
                                                     <div class="w-[32px] h-[32px]">
                                                         <img class="w-full h-full object-cover"
@@ -888,10 +942,9 @@
                                                     </span>
                                                 </td>
                                             </tr>
-                                            <tr
-                                                class="bg-[#FEE6EB] text-black border-b-[8px] border-white border-solid">
+                                            <tr class="bg-[#F2F0F9] text-black dark:bg-[#412E2E] dark:text-white">
                                                 <th scope="row"
-                                                    class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap flex items-center gap-[16px]">
+                                                    class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap flex items-center gap-[16px] dark:text-white">
                                                     <span>3</span>
                                                     <div class="w-[32px] h-[32px]">
                                                         <img class="w-full h-full object-cover"
@@ -954,7 +1007,7 @@
                             <div class="container">
                                 <div class="space-y-[32px] cursor-pointer">
                                     <div class="flex items-center justify-between">
-                                        <span class="font-semibold text-[20px]">🎮 Follow Club</span>
+                                        <span class="font-semibold text-[20px] dark:text-white">🎮 Follow Club</span>
                                         <div class="flex items-center gap-[10px]">
                                             <button class="cursor-pointer" id="prev">
                                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -994,53 +1047,57 @@
                                         <div id="owl-company" class="owl-carousel">
                                             <div class="item" style="text-align:-webkit-center">
                                                 <div
-                                                    class="flex items-center justify-center w-[124px] h-[124px] rounded-full">
-                                                    <img class="w-full h-full" src="./image/logo/Chelsea.png" alt="">
-                                                </div>
-                                            </div>
-                                            <div class="item" style="text-align:-webkit-center">
-                                                <div
-                                                    class="flex items-center justify-center w-[124px] h-[124px] rounded-full">
-                                                    <img class="w-full h-full" src="./image/logo/Liverpool.png" alt="">
-                                                </div>
-                                            </div>
-                                            <div class="item" style="text-align:-webkit-center">
-                                                <div
-                                                    class="flex items-center justify-center w-[124px] h-[124px] rounded-full">
-                                                    <img class="w-full h-full" src="./image/logo/Man_Utd.png" alt="">
-                                                </div>
-                                            </div>
-                                            <div class="item" style="text-align:-webkit-center">
-                                                <div
-                                                    class="flex items-center justify-center w-[124px] h-[124px] rounded-full">
-                                                    <img class="w-full h-full" src="./image/logo/Manchester_City.png"
+                                                    class="flex items-center justify-center w-[124px] h-[124px] rounded-full bg-[#F6F6F6] dark:bg-[#1B1C21]">
+                                                    <img class="!w-[64px] h-[64px]" src="./image/logo/Chelsea.png"
                                                         alt="">
                                                 </div>
                                             </div>
                                             <div class="item" style="text-align:-webkit-center">
                                                 <div
-                                                    class="flex items-center justify-center w-[124px] h-[124px] rounded-full">
-                                                    <img class="w-full h-full" src="./image/logo/Bayern.png"
+                                                    class="flex items-center justify-center w-[124px] h-[124px] rounded-full bg-[#F6F6F6] dark:bg-[#1B1C21]">
+                                                    <img class="!w-[64px] h-[64px]" src="./image/logo/Liverpool.png"
                                                         alt="">
                                                 </div>
                                             </div>
                                             <div class="item" style="text-align:-webkit-center">
                                                 <div
-                                                    class="flex items-center justify-center w-[124px] h-[124px] rounded-full">
-                                                    <img class="w-full h-full" src="./image/logo/Burnley.png" alt="">
+                                                    class="flex items-center justify-center w-[124px] h-[124px] rounded-full bg-[#F6F6F6] dark:bg-[#1B1C21]">
+                                                    <img class="!w-[64px] h-[64px]" src="./image/logo/Man_Utd.png"
+                                                        alt="">
                                                 </div>
                                             </div>
                                             <div class="item" style="text-align:-webkit-center">
                                                 <div
-                                                    class="flex items-center justify-center w-[124px] h-[124px] rounded-full">
-                                                    <img class="w-full h-full"
-                                                        src="./image/logo/Tottenham_Hotspurpng.png" alt="">
+                                                    class="flex items-center justify-center w-[124px] h-[124px] rounded-full bg-[#F6F6F6] dark:bg-[#1B1C21]">
+                                                    <img class="!w-[64px] h-[64px]"
+                                                        src="./image/logo/Manchester_City.png" alt="">
                                                 </div>
                                             </div>
                                             <div class="item" style="text-align:-webkit-center">
                                                 <div
-                                                    class="flex items-center justify-center w-[124px] h-[124px] rounded-full">
-                                                    <img class="w-full h-full"
+                                                    class="flex items-center justify-center w-[124px] h-[124px] rounded-full bg-[#F6F6F6] dark:bg-[#1B1C21]">
+                                                    <img class="!w-[64px] h-[64px]" src="./image/logo/Bayern.png"
+                                                        alt="">
+                                                </div>
+                                            </div>
+                                            <div class="item" style="text-align:-webkit-center">
+                                                <div
+                                                    class="flex items-center justify-center w-[124px] h-[124px] rounded-full bg-[#F6F6F6] dark:bg-[#1B1C21]">
+                                                    <img class="!w-[64px] h-[64px]" src="./image/logo/Burnley.png"
+                                                        alt="">
+                                                </div>
+                                            </div>
+                                            <div class="item" style="text-align:-webkit-center">
+                                                <div
+                                                    class="flex items-center justify-center w-[124px] h-[124px] rounded-full bg-[#F6F6F6] dark:bg-[#1B1C21]">
+                                                    <img class="!w-[64px] h-[64px]" src="./image/logo/Real-Madrid.png"
+                                                        alt="">
+                                                </div>
+                                            </div>
+                                            <div class="item" style="text-align:-webkit-center">
+                                                <div
+                                                    class="flex items-center justify-center w-[124px] h-[124px] rounded-full bg-[#F6F6F6] dark:bg-[#1B1C21]">
+                                                    <img class="!w-[64px] h-[64px]"
                                                         src="./image/logo/Paris_Saint-Germain.png" alt="">
                                                 </div>
                                             </div>
@@ -1055,7 +1112,7 @@
                             <div class="container">
                                 <div class="space-y-[32px] cursor-pointer">
                                     <div class="flex items-center justify-between">
-                                        <span class="font-semibold text-[20px]">👕 Shopping</span>
+                                        <span class="font-semibold text-[20px] dark:text-white">👕 Shopping</span>
                                         <div class="flex items-center gap-[10px]">
                                             <button class="cursor-pointer" id="shopping_prev">
                                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -1094,83 +1151,83 @@
                                     <div class="owl-carousel">
                                         <div class="item" style="text-align: -webkit-center;">
                                             <div
-                                                class="flex items-center justify-center w-[223px] h-[282px] bg-[#F6F6F6] rounded-[16px] p-[24px]">
+                                                class="flex items-center justify-center w-[223px] h-[282px] bg-[#F6F6F6] rounded-[16px] p-[24px] dark:bg-[#1B1C21]">
                                                 <img class="w-full h-full" src="./image/shirt/shirt-arsenal.png" alt="">
                                             </div>
                                             <div class="mt-1">
-                                                <p class="mb-0">Arsenal Away Kit 21/22</p>
-                                                <p class="text-[#5742A9]">$140.11</p>
+                                                <p class="mb-0 dark:text-white">Arsenal Away Kit 21/22</p>
+                                                <p class="text-[#5742A9] dark:text-[#F5C451]">$140.11</p>
                                             </div>
                                         </div>
                                         <div class="item" style="text-align: -webkit-center;">
                                             <div
-                                                class="flex items-center justify-center w-[223px] h-[282px] bg-[#F6F6F6] rounded-[16px] p-[24px]">
+                                                class="flex items-center justify-center w-[223px] h-[282px] bg-[#F6F6F6] rounded-[16px] p-[24px] dark:bg-[#1B1C21]">
                                                 <img class="w-full h-full" src="./image/shirt/shirt-bayern.png" alt="">
                                             </div>
                                             <div class="mt-1">
-                                                <p class="mb-0">Bayern Away Kit 21/22</p>
-                                                <p class="text-[#5742A9]">$140.11</p>
+                                                <p class="mb-0 dark:text-white">Bayern Away Kit 21/22</p>
+                                                <p class="text-[#5742A9] dark:text-[#F5C451]">$140.11</p>
                                             </div>
                                         </div>
                                         <div class="item" style="text-align: -webkit-center;">
                                             <div
-                                                class="flex items-center justify-center w-[223px] h-[282px] bg-[#F6F6F6] rounded-[16px] p-[24px]">
+                                                class="flex items-center justify-center w-[223px] h-[282px] bg-[#F6F6F6] rounded-[16px] p-[24px] dark:bg-[#1B1C21]">
                                                 <img class="w-full h-full" src="./image/shirt/shirt-chelsea.png" alt="">
                                             </div>
                                             <div class="mt-1">
-                                                <p class="mb-0">Chelsea Home Kit 21 / 22</p>
-                                                <p class="text-[#5742A9]">$140.11</p>
+                                                <p class="mb-0 dark:text-white">Chelsea Home Kit 21 / 22</p>
+                                                <p class="text-[#5742A9] dark:text-[#F5C451]">$140.11</p>
                                             </div>
                                         </div>
                                         <div class="item" style="text-align: -webkit-center;">
                                             <div
-                                                class="flex items-center justify-center w-[223px] h-[282px] bg-[#F6F6F6] rounded-[16px] p-[24px]">
+                                                class="flex items-center justify-center w-[223px] h-[282px] bg-[#F6F6F6] rounded-[16px] p-[24px] dark:bg-[#1B1C21]">
                                                 <img class="w-full h-full" src="./image/shirt/shirt-liverpool.png"
                                                     alt="">
                                             </div>
                                             <div class="mt-1">
-                                                <p class="mb-0">Liverpool Away Kit 21/22</p>
-                                                <p class="text-[#5742A9]">$140.11</p>
+                                                <p class="mb-0 dark:text-white">Liverpool Away Kit 21/22</p>
+                                                <p class="text-[#5742A9] dark:text-[#F5C451]">$140.11</p>
                                             </div>
                                         </div>
                                         <div class="item" style="text-align: -webkit-center;">
                                             <div
-                                                class="flex items-center justify-center w-[223px] h-[282px] bg-[#F6F6F6] rounded-[16px] p-[24px]">
+                                                class="flex items-center justify-center w-[223px] h-[282px] bg-[#F6F6F6] rounded-[16px] p-[24px] dark:bg-[#1B1C21]">
                                                 <img class="w-full h-full" src="./image/shirt/shirt-mc.png" alt="">
                                             </div>
                                             <div class="mt-1">
-                                                <p class="mb-0">Man City Away Kit 21/22</p>
-                                                <p class="text-[#5742A9]">$140.11</p>
+                                                <p class="mb-0 dark:text-white">Man City Away Kit 21/22</p>
+                                                <p class="text-[#5742A9] dark:text-[#F5C451]">$140.11</p>
                                             </div>
                                         </div>
                                         <div class="item" style="text-align: -webkit-center;">
                                             <div
-                                                class="flex items-center justify-center w-[223px] h-[282px] bg-[#F6F6F6] rounded-[16px] p-[24px]">
+                                                class="flex items-center justify-center w-[223px] h-[282px] bg-[#F6F6F6] rounded-[16px] p-[24px] dark:bg-[#1B1C21]">
                                                 <img class="w-full h-full" src="./image/shirt/shirt-mu.png" alt="">
                                             </div>
                                             <div class="mt-1">
-                                                <p class="mb-0">Man United Kit 21/22</p>
-                                                <p class="text-[#5742A9]">$140.11</p>
+                                                <p class="mb-0 dark:text-white">Man United Kit 21/22</p>
+                                                <p class="text-[#5742A9] dark:text-[#F5C451]">$140.11</p>
                                             </div>
                                         </div>
                                         <div class="item" style="text-align: -webkit-center;">
                                             <div
-                                                class="flex items-center justify-center w-[223px] h-[282px] bg-[#F6F6F6] rounded-[16px] p-[24px]">
+                                                class="flex items-center justify-center w-[223px] h-[282px] bg-[#F6F6F6] rounded-[16px] p-[24px] dark:bg-[#1B1C21]">
                                                 <img class="w-full h-full" src="./image/shirt/shirt-psg.png" alt="">
                                             </div>
                                             <div class="mt-1">
-                                                <p class="mb-0">Paris Saint Sermain Away Kit 21/22</p>
-                                                <p class="text-[#5742A9]">$140.11</p>
+                                                <p class="mb-0 dark:text-white">Paris Saint Sermain Away Kit 21/22</p>
+                                                <p class="text-[#5742A9] dark:text-[#F5C451]">$140.11</p>
                                             </div>
                                         </div>
                                         <div class="item" style="text-align: -webkit-center;">
                                             <div
-                                                class="flex items-center justify-center w-[223px] h-[282px] bg-[#F6F6F6] rounded-[16px] p-[24px]">
+                                                class="flex items-center justify-center w-[223px] h-[282px] bg-[#F6F6F6] rounded-[16px] p-[24px] dark:bg-[#1B1C21]">
                                                 <img class="w-full h-full" src="./image/shirt/shirt-tot.png" alt="">
                                             </div>
                                             <div class="mt-1">
-                                                <p class="mb-0">Tottenham Away Kit 21/22</p>
-                                                <p class="text-[#5742A9]">$140.11</p>
+                                                <p class="mb-0 dark:text-white">Tottenham Away Kit 21/22</p>
+                                                <p class="text-[#5742A9] dark:text-[#F5C451]">$140.11</p>
                                             </div>
                                         </div>
                                     </div>
@@ -1181,12 +1238,14 @@
 
                         <section class="relative">
                             <div class="container">
-                                <div class="flex justify-between h-[350px] bg-[#F6F6F6] rounded-[24px] p-[30px]">
+                                <div
+                                    class="flex justify-between h-[350px] bg-[#F6F6F6] rounded-[24px] p-[30px] dark:bg-[#363636]">
                                     <div class="w-[300px]">
-                                        <p class="mb-[8px] text-[#5742A9]">New Platform</p>
-                                        <p class="font-semibold text-[28px] mb-[24px]">Get one of our sports apps, which
+                                        <p class="mb-[8px] text-[#5742A9] dark:text-[#F5C451]">New Platform</p>
+                                        <p class="font-semibold text-[28px] mb-[24px dark:text-white">Get one of our
+                                            sports apps, which
                                             is only available on</p>
-                                        <div class="mb-[16px]">Download Apps :</div>
+                                        <div class="mb-[16px] dark:text-white">Download Apps :</div>
                                         <div class="flex gap-[18px]">
                                             <div class="cursor-pointer">
                                                 <img src="./image/img/appstore.png" alt="">
@@ -1209,13 +1268,14 @@
                         </section>
 
                         <section class="relative">
-                            <span class="font-semibold text-[20px]">📰 All News and Transfer Today</span>
+                            <span class="font-semibold text-[20px] dark:text-white">📰 All News and Transfer
+                                Today</span>
                             <div
                                 class="text-sm font-medium text-center text-[#A4A4A4] border-b border-gray-200 mb-[32px]">
                                 <ul class="flex flex-wrap -mb-px">
                                     <li class="mr-2">
                                         <a href="#"
-                                            class="inline-block p-4 border-b-2 border-[#5742A9] rounded-t-lg text-[16px] font-semibold active text-black"
+                                            class="inline-block p-4 border-b-2 border-[#5742A9] rounded-t-lg text-[16px] font-semibold active text-black dark:text-white dark:border-[#F5C451]"
                                             aria-current="page">All News</a>
                                     </li>
                                     <li class="mr-2">
@@ -1234,11 +1294,11 @@
                                     <div class="rounded-[16px]">
                                         <img class="w-full object-cover" src="./image/new/arsenal.png" alt="">
                                     </div>
-                                    <div class="text-[#5742A9]">PREMIER LEAGUE</div>
-                                    <div class="font-medium text-[16px]">
+                                    <div class="text-[#5742A9] dark:text-[#F5C451]">PREMIER LEAGUE</div>
+                                    <div class="font-medium text-[16px] dark:text-white">
                                         Signs of Arsenal getting stronger in the Premier League
                                     </div>
-                                    <div class="text-[#636363] line-clamp-2">
+                                    <div class="text-[#636363] line-clamp-2 dark:text-[#A4A4A4]">
                                         The victory over Wolves provided a comfortable distance for Arsenal at the top
                                         of the Premier League standings
                                     </div>
@@ -1247,11 +1307,11 @@
                                     <div class="rounded-[16px]">
                                         <img class="w-full object-cover" src="./image/new/haaland.png" alt="">
                                     </div>
-                                    <div class="text-[#5742A9]">PREMIER LEAGUE</div>
-                                    <div class="font-medium text-[16px]">
+                                    <div class="text-[#5742A9] dark:text-[#F5C451]">PREMIER LEAGUE</div>
+                                    <div class="font-medium text-[16px] dark:text-white">
                                         Erling Haaland Leads Premier League Top Scorers 2022
                                     </div>
-                                    <div class="text-[#636363] line-clamp-2">
+                                    <div class="text-[#636363] line-clamp-2 dark:text-[#A4A4A4]">
                                         Until the competition break in facing the 2022 World Cup in Qatar, Haaland is
                                         still the top scorer or top scorer for the 2022/2023 Premier League temporarily.
                                     </div>
@@ -1260,11 +1320,11 @@
                                     <div class="rounded-[16px]">
                                         <img class="w-full object-cover" src="./image/new/chelsea.png" alt="">
                                     </div>
-                                    <div class="text-[#5742A9]">PREMIER LEAGUE</div>
-                                    <div class="font-medium text-[16px]">
+                                    <div class="text-[#5742A9 dark:text-[#F5C451]]">PREMIER LEAGUE</div>
+                                    <div class="font-medium text-[16px] dark:text-white">
                                         Chelsea were humiliated 1-4 at Brighton headquarters
                                     </div>
-                                    <div class="text-[#636363] line-clamp-2">
+                                    <div class="text-[#636363] line-clamp-2 dark:text-[#A4A4A4]">
                                         Chelsea were humiliated by losing with a big score of 1-4 when they visited
                                         Brighton headquarters in Matchday 14 of the English Premier League at the Amex
                                         Stadium on Saturday night
@@ -1274,11 +1334,11 @@
                                     <div class="rounded-[16px]">
                                         <img class="w-full object-cover" src="./image/new/mu.png" alt="">
                                     </div>
-                                    <div class="text-[#5742A9]">PREMIER LEAGUE</div>
-                                    <div class="font-medium text-[16px]">
+                                    <div class="text-[#5742A9] dark:text-[#F5C451]">PREMIER LEAGUE</div>
+                                    <div class="font-medium text-[16px] dark:text-white">
                                         Garnacho led Manchester United to beat Fulham
                                     </div>
-                                    <div class="text-[#636363] line-clamp-2">
+                                    <div class="text-[#636363] line-clamp-2 dark:text-[#A4A4A4]">
                                         Midfielder Christian Eriksen not only put United ahead in the 14th minute but
                                         also scored his first goal for United since joining the Red Devils last summer.
                                     </div>
@@ -1292,7 +1352,8 @@
     </main>
 
     <footer class="footer">
-        <div class="text-[#636363] text-[0.875rem] py-[1rem] text-center bg-[#F6F6F4] leading-none">
+        <div
+            class="text-[#636363] text-[0.875rem] py-[1rem] text-center bg-[#F6F6F4] leading-none dark:text-[#A4A4A4] dark:bg-[#212227]">
             <div class="container">© 2023 Xuchin Design. All rights reserved.</div>
         </div>
     </footer>

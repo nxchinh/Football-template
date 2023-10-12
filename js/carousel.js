@@ -147,4 +147,24 @@ jQuery(function($) {
     // $("#toggle-seach-adv").click(function() {
     //     $("#content-search-adv").slideToggle(500);
     // });
+
+    const darkModeToggle = document.getElementById('dark-mode-toggle');
+    const body = document.body;
+
+    // Kiểm tra xem dark mode đã được kích hoạt trong localStorage
+    if (localStorage.getItem('darkMode') === 'enabled') {
+        body.classList.add('dark');
+    }
+
+    darkModeToggle.addEventListener('click', () => {
+        // Khi người dùng kích hoạt hoặc tắt dark mode, thay đổi trạng thái và lưu nó trong localStorage
+        if (body.classList.contains('dark')) {
+            body.classList.remove('dark');
+            localStorage.setItem('darkMode', 'disabled');
+        } else {
+            body.classList.add('dark');
+            localStorage.setItem('darkMode', 'enabled');
+        }
+    });
+    
 });
