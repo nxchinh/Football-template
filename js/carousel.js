@@ -109,17 +109,17 @@ jQuery(function($) {
 
     UI.ready();
 
-    //Tab
-    // $(".tabs .tabs__nav-item").click(function () {
-    //     const tabName = $(this).data("tab");
+    // Tab
+    $(".tabs .tabs__nav-item").click(function () {
+        const tabName = $(this).data("tab");
 
-    //     $(".tabs__content .tabs__content-item").hide();
+        $(".tabs__content").hide();
 
-    //     $(".tabs .tabs__nav-item").removeClass("active");
+        $(".tabs .tabs__nav-item").removeClass("active");
 
-    //     $("#" + tabName).show();
-    //     $(this).addClass("active");
-    // });
+        $("#" + tabName).show();
+        $(this).addClass("active");
+    });
 
     //Modal
     // jQuery('.modal__toggle[data-modal-action="open"]').click(function(e) {

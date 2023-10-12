@@ -296,8 +296,7 @@
                             </div>
                         </div>
                         <div class="group">
-                            <div
-                                class="flex justify-between items-center text-[#636363] cursor-pointer uppercase  group-hover:text-[#5742A9]dark:text-[#A4A4A4] dark:group-hover:text-[#F5C451]">
+                            <div class="flex justify-between items-center text-[#636363] cursor-pointer uppercase">
                                 <span>Football League</span>
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -432,7 +431,7 @@
                             [nzTooltipTitle]="'BTN.RESET' | transloco" [attr.keyLabel]="'BTN.RESET'" nz-tooltip>
                             Go Premium
                         </button>
-                        <div class="text-[#636363] dark:text-[#A4A4A4]">
+                        <div class="text-[#636363] cursor-pointer dark:text-[#A4A4A4]">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <g clip-path="url(#clip0_171_297)">
@@ -447,7 +446,7 @@
                                 </defs>
                             </svg>
                         </div>
-                        <div class="text-[#636363] dark:text-[#A4A4A4]">
+                        <div class="text-[#636363] cursor-pointer dark:text-[#A4A4A4]">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <g clip-path="url(#clip0_171_300)">
@@ -478,7 +477,7 @@
                                 </defs>
                             </svg>
                         </div>
-                        <div>
+                        <div class="cursor-pointer">
                             <img src="./image/img/info.png" alt="info.png">
                         </div>
                     </div>
@@ -581,35 +580,37 @@
                         <section class="relative">
                             <span class="font-semibold text-[20px] dark:text-white">⚽ Football Match</span>
                             <div
-                                class="text-sm font-medium text-center text-[#A4A4A4] border-b border-gray-200 mb-[32px]">
-                                <ul class="flex flex-wrap -mb-px">
-                                    <li class="mr-2">
+                                class="tabs text-sm font-medium text-center text-[#A4A4A4] border-b border-gray-200 mb-[32px]">
+                                <div class="tabs__nav flex flex-wrap -mb-px">
+                                    <div class="tabs__nav-item mr-2 active" data-tab="Tab1">
                                         <a href="#"
-                                            class="inline-block p-4 border-b-2 border-[#5742A9] rounded-t-lg text-[16px] font-semibold active text-black dark:text-white"
-                                            aria-current="page">Latest Match</a>
-                                    </li>
-                                    <li class="mr-2">
-                                        <a href="#"
-                                            class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300">Coming
+                                            class="inline-block p-4 rounded-t-lg font-semibold hover:text-gray-600 hover:border-gray-300"
+                                            >Latest Match</a>
+                                    </div>
+                                    <div class="tabs__nav-item mr-2" data-tab="Tab2">
+                                        <a href="#" 
+                                            class="inline-block p-4 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300">Coming
                                             Match</a>
-                                    </li>
-                                    <li class="mr-2">
-                                        <a href="#"
-                                            class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300">Pre-season</a>
-                                    </li>
-                                    <li class="mr-2">
-                                        <a href="#"
-                                            class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300">Live
+                                    </div>
+                                    <div class="tabs__nav-item mr-2" data-tab="Tab3">
+                                        <a href="#" 
+                                            class="inline-block p-4 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300">Pre-season</a>
+                                    </div>
+                                    <div class="tabs__nav-item mr-2" data-tab="Tab4">
+                                        <a href="#" 
+                                            class="inline-block p-4 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300">Live
                                             Games</a>
-                                    </li>
-                                    <li class="mr-2">
+                                    </div>
+                                    <div class="tabs__nav-item mr-2"  data-tab="Tab5">
                                         <a href="#"
-                                            class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300">Fun
+                                            class="inline-block p-4 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300">Fun
                                             Football</a>
-                                    </li>
-                                </ul>
+                                    </div>
+                                </div>
                             </div>
-                            <div
+                            <div class="tabs__content">
+                               <div id="Tab1" class="tabs__content-item">
+                                <div
                                 class="p-[16px_24px] w-full flex items-center justify-between bg-[#FBFBFB] rounded-[8px] dark:bg-[#1B1C21] dark:text-white">
                                 <div class="w-[462px] flex items-center gap-[32px] justify-between">
                                     <div class="flex gap-[15px] items-center w-full">
@@ -629,7 +630,8 @@
                                     <span>Full - Time</span>
                                 </div>
                                 <div class="flex items-center gap-[16px]">
-                                    <span class="text-[#636363] mr-[24px] dark:text-[#A4A4A4]">18 December 2022</span>
+                                    <span class="text-[#636363] mr-[24px] dark:text-[#A4A4A4]">18 December
+                                        2022</span>
                                     <span class="cursor-pointer">
                                         <svg width="25" height="25" viewBox="0 0 25 25" fill="currentColor"
                                             xmlns="http://www.w3.org/2000/svg">
@@ -684,7 +686,8 @@
                                     <span>Full - Time</span>
                                 </div>
                                 <div class="flex items-center gap-[16px]">
-                                    <span class="text-[#636363] mr-[24px] dark:text-[#A4A4A4]">18 December 2022</span>
+                                    <span class="text-[#636363] mr-[24px] dark:text-[#A4A4A4]">18 December
+                                        2022</span>
                                     <span class="cursor-pointer">
                                         <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
@@ -739,7 +742,8 @@
                                     <span>Full - Time</span>
                                 </div>
                                 <div class="flex items-center gap-[16px]">
-                                    <span class="text-[#636363] mr-[24px] dark:text-[#A4A4A4]">17 December 2022</span>
+                                    <span class="text-[#636363] mr-[24px] dark:text-[#A4A4A4]">17 December
+                                        2022</span>
                                     <span class="cursor-pointer">
                                         <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
@@ -774,6 +778,13 @@
                                     </span>
                                 </div>
                             </div>
+                               </div>
+                               <div id="Tab2" class="tabs__content-item"></div>
+                               <div id="Tab3" class="tabs__content-item"></div>
+                               <div id="Tab4" class="tabs__content-item"></div>
+                               <div id="Tab5" class="tabs__content-item"></div>
+                            </div>
+
                         </section>
                         <div class="w-full h-[3px] bg-[#EFEFEF]"></div>
                         <section class="relative">
@@ -1320,7 +1331,7 @@
                                     <div class="rounded-[16px]">
                                         <img class="w-full object-cover" src="./image/new/chelsea.png" alt="">
                                     </div>
-                                    <div class="text-[#5742A9 dark:text-[#F5C451]]">PREMIER LEAGUE</div>
+                                    <div class="text-[#5742A9 dark:text-[#F5C451]">PREMIER LEAGUE</div>
                                     <div class="font-medium text-[16px] dark:text-white">
                                         Chelsea were humiliated 1-4 at Brighton headquarters
                                     </div>

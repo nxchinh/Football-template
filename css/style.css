@@ -91,6 +91,13 @@ input, select {
   margin: -15px;
 }
 
+.active a {
+  border-bottom: 2px solid #5742A9;
+  font-size: 16px;
+  color: black;
+  font-weight: 600;
+}
+
 @media only screen and (min-width: 1536px) {
   .container {
     max-width: 1425px !important;
