@@ -8,16 +8,10 @@
     <link rel="stylesheet" href="./js/owlcarousel/assets/owl.theme.default.min.css">
     <link rel="icon" type="image/x-icon" href="./image/ico/favicon.ico" id="appIcon" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            variants: {
-                extend: {
-                    display: ['group-hover'],
-                },
-            },
-        }
-    </script>
+    <script src="./js/taildwind.config.js"></script>
+    <style type="text/tailwindcss">
+
+    </style>
     <title>One sport</title>
 </head>
 
@@ -296,7 +290,8 @@
                             </div>
                         </div>
                         <div class="group">
-                            <div class="flex justify-between items-center text-[#636363] cursor-pointer uppercase">
+                            <div
+                                class="menu__select flex justify-between items-center text-[#636363] cursor-pointer uppercase">
                                 <span>Football League</span>
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -312,26 +307,28 @@
                                     </defs>
                                 </svg>
                             </div>
-                        </div>
-                        <div class="flex items-center gap-[16px] text-[#636363] cursor-pointer dark:text-white">
-                            <img src="./image/img/worlcup.png" alt="worlcup.png">
-                            <span class="text-[16px]">Worldcup Qatar 2022</span>
-                        </div>
-                        <div class="flex items-center gap-[16px] text-[#636363] cursor-pointer dark:text-white">
-                            <img src="./image/img/C1.png" alt="worlcup.png">
-                            <span class="text-[16px]">Champions League</span>
-                        </div>
-                        <div class="flex items-center gap-[16px] text-[#636363] cursor-pointer dark:text-white">
-                            <img src="./image/img/premier.png" alt="worlcup.png">
-                            <span class="text-[16px]">Premier League</span>
-                        </div>
-                        <div class="flex items-center gap-[16px] text-[#636363] cursor-pointer dark:text-white">
-                            <img src="./image/img/laliga.png" alt="worlcup.png">
-                            <span class="text-[16px]">La Liga</span>
-                        </div>
-                        <div class="flex items-center gap-[16px] text-[#636363] cursor-pointer dark:text-white">
-                            <img src="./image/img/ligue1.png" alt="worlcup.png">
-                            <span class="text-[16px]">Ligue 1</span>
+                            <div class="menu__select-item active space-y-[32px] pt-[32px]">
+                                <div class="flex items-center gap-[16px] text-[#636363] cursor-pointer dark:text-white">
+                                    <img src="./image/img/worlcup.png" alt="worlcup.png">
+                                    <span class="text-[16px]">Worldcup Qatar 2022</span>
+                                </div>
+                                <div class="flex items-center gap-[16px] text-[#636363] cursor-pointer dark:text-white">
+                                    <img src="./image/img/C1.png" alt="worlcup.png">
+                                    <span class="text-[16px]">Champions League</span>
+                                </div>
+                                <div class="flex items-center gap-[16px] text-[#636363] cursor-pointer dark:text-white">
+                                    <img src="./image/img/premier.png" alt="worlcup.png">
+                                    <span class="text-[16px]">Premier League</span>
+                                </div>
+                                <div class="flex items-center gap-[16px] text-[#636363] cursor-pointer dark:text-white">
+                                    <img src="./image/img/laliga.png" alt="worlcup.png">
+                                    <span class="text-[16px]">La Liga</span>
+                                </div>
+                                <div class="flex items-center gap-[16px] text-[#636363] cursor-pointer dark:text-white">
+                                    <img src="./image/img/ligue1.png" alt="worlcup.png">
+                                    <span class="text-[16px]">Ligue 1</span>
+                                </div>
+                            </div>
                         </div>
                         <div class="text-[#636363] uppercase dark:text-[#A4A4A4]">
                             Favorite club
@@ -484,10 +481,10 @@
                 </div>
                 <div class="p-[16px_24px] dark:bg-[#212227]">
                     <div class="flex gap-[24px] flex-nowrap mb-[24px]">
-                        <div class="w-full max-w-[1024px] rounded-[16px] shrink-0">
+                        <div class="w-full  rounded-[16px] flex-auto">
                             <img class="w-full h-full object-cover rounded-[16px]" src="./image/img/banner.png" alt="">
                         </div>
-                        <div class="w-full p-[30px_22px] bg-white rounded-[16px] space-y-[50px] dark:bg-[#1B1C21]">
+                        <div class="w-[360px] p-[30px_22px] bg-white rounded-[16px] space-y-[12px] dark:bg-[#1B1C21]">
                             <div class="text-center">
                                 <p class="mb-[6px] font-semibold dark:text-white">Live Match</p>
                                 <p class="mb-0 text-[#096A00] dark:text-[#14FF00]">62 : 24</p>
@@ -584,24 +581,24 @@
                                 <div class="tabs__nav flex flex-wrap -mb-px">
                                     <div class="tabs__nav-item mr-2 active" data-tab="Tab1">
                                         <a href="#"
-                                            class="inline-block p-4 rounded-t-lg font-semibold hover:text-gray-600 hover:border-gray-300"
-                                            >Latest Match</a>
+                                            class="inline-block p-4 rounded-t-lg font-semibold hover:text-gray-600 hover:border-gray-300">Latest
+                                            Match</a>
                                     </div>
                                     <div class="tabs__nav-item mr-2" data-tab="Tab2">
-                                        <a href="#" 
+                                        <a href="#"
                                             class="inline-block p-4 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300">Coming
                                             Match</a>
                                     </div>
                                     <div class="tabs__nav-item mr-2" data-tab="Tab3">
-                                        <a href="#" 
+                                        <a href="#"
                                             class="inline-block p-4 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300">Pre-season</a>
                                     </div>
                                     <div class="tabs__nav-item mr-2" data-tab="Tab4">
-                                        <a href="#" 
+                                        <a href="#"
                                             class="inline-block p-4 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300">Live
                                             Games</a>
                                     </div>
-                                    <div class="tabs__nav-item mr-2"  data-tab="Tab5">
+                                    <div class="tabs__nav-item mr-2" data-tab="Tab5">
                                         <a href="#"
                                             class="inline-block p-4 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300">Fun
                                             Football</a>
@@ -609,180 +606,180 @@
                                 </div>
                             </div>
                             <div class="tabs__content">
-                               <div id="Tab1" class="tabs__content-item">
-                                <div
-                                class="p-[16px_24px] w-full flex items-center justify-between bg-[#FBFBFB] rounded-[8px] dark:bg-[#1B1C21] dark:text-white">
-                                <div class="w-[462px] flex items-center gap-[32px] justify-between">
-                                    <div class="flex gap-[15px] items-center w-full">
-                                        <img src="./image/img/argentina.png" alt="argentina.png">
-                                        <span>Argentina</span>
+                                <div id="Tab1" class="tabs__content-item">
+                                    <div
+                                        class="p-[16px_24px] w-full flex items-center justify-between bg-[#FBFBFB] rounded-[8px] dark:bg-[#1B1C21] dark:text-white">
+                                        <div class="w-[462px] flex items-center gap-[32px] justify-between">
+                                            <div class="flex gap-[15px] items-center w-full">
+                                                <img src="./image/img/argentina.png" alt="argentina.png">
+                                                <span>Argentina</span>
+                                            </div>
+                                            <div
+                                                class="flex items-center justify-center w-full rounded-[16px] text-[#5742A9] bg-[rgb(87,66,169,0.1)] h-[30px] dark:text-[#F5C451] dark:bg-[rgb(245,196,81,0.1)]">
+                                                1 - 2</div>
+                                            <div class="flex gap-[15px] items-center w-full justify-end">
+                                                <span>Italy</span>
+                                                <img src="./image/img/italy.png" alt="italy.png">
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="text-[#FA0E0E] bg-[rgb(250,14,14,0.1)] p-[8px_16px] rounded-[8px] dark:text-white dark:bg-[rgb(255,255,255,0.1)]">
+                                            <span>Full - Time</span>
+                                        </div>
+                                        <div class="flex items-center gap-[16px]">
+                                            <span class="text-[#636363] mr-[24px] dark:text-[#A4A4A4]">18 December
+                                                2022</span>
+                                            <span class="cursor-pointer">
+                                                <svg width="25" height="25" viewBox="0 0 25 25" fill="currentColor"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <g clip-path="url(#clip0_183_372)">
+                                                        <path
+                                                            d="M12.5 22.5C6.977 22.5 2.5 18.023 2.5 12.5C2.5 6.977 6.977 2.5 12.5 2.5C18.023 2.5 22.5 6.977 22.5 12.5C22.5 18.023 18.023 22.5 12.5 22.5ZM12.5 20.5C14.6217 20.5 16.6566 19.6571 18.1569 18.1569C19.6571 16.6566 20.5 14.6217 20.5 12.5C20.5 10.3783 19.6571 8.34344 18.1569 6.84315C16.6566 5.34285 14.6217 4.5 12.5 4.5C10.3783 4.5 8.34344 5.34285 6.84315 6.84315C5.34285 8.34344 4.5 10.3783 4.5 12.5C4.5 14.6217 5.34285 16.6566 6.84315 18.1569C8.34344 19.6571 10.3783 20.5 12.5 20.5ZM11.5 7.5H13.5V9.5H11.5V7.5ZM11.5 11.5H13.5V17.5H11.5V11.5Z"
+                                                            fill="#A4A4A4" />
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_183_372">
+                                                            <rect width="24" height="24" fill="white"
+                                                                transform="translate(0.5 0.5)" />
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+                                            </span>
+                                            <span class="cursor-pointer">
+                                                <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <g clip-path="url(#clip0_183_375)">
+                                                        <path
+                                                            d="M5.53133 3.5V19.5H21.7819V21.5H3.5V3.5H5.53133ZM21.0639 6.793L22.5 8.207L16.7036 13.914L13.6566 10.915L9.29639 15.207L7.86024 13.793L13.6566 8.086L16.7036 11.085L21.0639 6.793Z"
+                                                            fill="#A4A4A4" />
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_183_375">
+                                                            <rect width="24" height="24" fill="white"
+                                                                transform="translate(0.5 0.5)" />
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+                                            </span>
+                                        </div>
                                     </div>
                                     <div
-                                        class="flex items-center justify-center w-full rounded-[16px] text-[#5742A9] bg-[rgb(87,66,169,0.1)] h-[30px] dark:text-[#F5C451] dark:bg-[rgb(245,196,81,0.1)]">
-                                        1 - 2</div>
-                                    <div class="flex gap-[15px] items-center w-full justify-end">
-                                        <span>Italy</span>
-                                        <img src="./image/img/italy.png" alt="italy.png">
-                                    </div>
-                                </div>
-                                <div
-                                    class="text-[#FA0E0E] bg-[rgb(250,14,14,0.1)] p-[8px_16px] rounded-[8px] dark:text-white dark:bg-[rgb(255,255,255,0.1)]">
-                                    <span>Full - Time</span>
-                                </div>
-                                <div class="flex items-center gap-[16px]">
-                                    <span class="text-[#636363] mr-[24px] dark:text-[#A4A4A4]">18 December
-                                        2022</span>
-                                    <span class="cursor-pointer">
-                                        <svg width="25" height="25" viewBox="0 0 25 25" fill="currentColor"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <g clip-path="url(#clip0_183_372)">
-                                                <path
-                                                    d="M12.5 22.5C6.977 22.5 2.5 18.023 2.5 12.5C2.5 6.977 6.977 2.5 12.5 2.5C18.023 2.5 22.5 6.977 22.5 12.5C22.5 18.023 18.023 22.5 12.5 22.5ZM12.5 20.5C14.6217 20.5 16.6566 19.6571 18.1569 18.1569C19.6571 16.6566 20.5 14.6217 20.5 12.5C20.5 10.3783 19.6571 8.34344 18.1569 6.84315C16.6566 5.34285 14.6217 4.5 12.5 4.5C10.3783 4.5 8.34344 5.34285 6.84315 6.84315C5.34285 8.34344 4.5 10.3783 4.5 12.5C4.5 14.6217 5.34285 16.6566 6.84315 18.1569C8.34344 19.6571 10.3783 20.5 12.5 20.5ZM11.5 7.5H13.5V9.5H11.5V7.5ZM11.5 11.5H13.5V17.5H11.5V11.5Z"
-                                                    fill="#A4A4A4" />
-                                            </g>
-                                            <defs>
-                                                <clipPath id="clip0_183_372">
-                                                    <rect width="24" height="24" fill="white"
-                                                        transform="translate(0.5 0.5)" />
-                                                </clipPath>
-                                            </defs>
-                                        </svg>
-                                    </span>
-                                    <span class="cursor-pointer">
-                                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <g clip-path="url(#clip0_183_375)">
-                                                <path
-                                                    d="M5.53133 3.5V19.5H21.7819V21.5H3.5V3.5H5.53133ZM21.0639 6.793L22.5 8.207L16.7036 13.914L13.6566 10.915L9.29639 15.207L7.86024 13.793L13.6566 8.086L16.7036 11.085L21.0639 6.793Z"
-                                                    fill="#A4A4A4" />
-                                            </g>
-                                            <defs>
-                                                <clipPath id="clip0_183_375">
-                                                    <rect width="24" height="24" fill="white"
-                                                        transform="translate(0.5 0.5)" />
-                                                </clipPath>
-                                            </defs>
-                                        </svg>
-                                    </span>
-                                </div>
-                            </div>
-                            <div
-                                class="p-[16px_24px] w-full flex items-center justify-between rounded-[8px] dark:text-white">
-                                <div class="w-[462px] flex items-center gap-[32px] justify-between">
-                                    <div class="flex gap-[15px] items-center w-full">
-                                        <img src="./image/img/portugal.png" alt="argentina.png">
-                                        <span>Portugal</span>
-                                    </div>
-                                    <div
-                                        class="flex items-center justify-center w-full rounded-[16px] text-[#5742A9] bg-[rgb(87,66,169,0.1)] h-[30px] dark:text-[#F5C451] dark:bg-[rgb(245,196,81,0.1)]">
-                                        2 - 3</div>
-                                    <div class="flex gap-[15px] items-center w-full justify-end">
-                                        <span>Belgium</span>
-                                        <img src="./image/img/belgium.png" alt="italy.png">
-                                    </div>
-                                </div>
-                                <div
-                                    class="text-[#FA0E0E] bg-[rgb(250,14,14,0.1)] p-[8px_16px] rounded-[8px] dark:text-white dark:bg-[rgb(255,255,255,0.1)]">
-                                    <span>Full - Time</span>
-                                </div>
-                                <div class="flex items-center gap-[16px]">
-                                    <span class="text-[#636363] mr-[24px] dark:text-[#A4A4A4]">18 December
-                                        2022</span>
-                                    <span class="cursor-pointer">
-                                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <g clip-path="url(#clip0_183_372)">
-                                                <path
-                                                    d="M12.5 22.5C6.977 22.5 2.5 18.023 2.5 12.5C2.5 6.977 6.977 2.5 12.5 2.5C18.023 2.5 22.5 6.977 22.5 12.5C22.5 18.023 18.023 22.5 12.5 22.5ZM12.5 20.5C14.6217 20.5 16.6566 19.6571 18.1569 18.1569C19.6571 16.6566 20.5 14.6217 20.5 12.5C20.5 10.3783 19.6571 8.34344 18.1569 6.84315C16.6566 5.34285 14.6217 4.5 12.5 4.5C10.3783 4.5 8.34344 5.34285 6.84315 6.84315C5.34285 8.34344 4.5 10.3783 4.5 12.5C4.5 14.6217 5.34285 16.6566 6.84315 18.1569C8.34344 19.6571 10.3783 20.5 12.5 20.5ZM11.5 7.5H13.5V9.5H11.5V7.5ZM11.5 11.5H13.5V17.5H11.5V11.5Z"
-                                                    fill="#A4A4A4" />
-                                            </g>
-                                            <defs>
-                                                <clipPath id="clip0_183_372">
-                                                    <rect width="24" height="24" fill="white"
-                                                        transform="translate(0.5 0.5)" />
-                                                </clipPath>
-                                            </defs>
-                                        </svg>
-                                    </span>
-                                    <span class="cursor-pointer">
-                                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <g clip-path="url(#clip0_183_375)">
-                                                <path
-                                                    d="M5.53133 3.5V19.5H21.7819V21.5H3.5V3.5H5.53133ZM21.0639 6.793L22.5 8.207L16.7036 13.914L13.6566 10.915L9.29639 15.207L7.86024 13.793L13.6566 8.086L16.7036 11.085L21.0639 6.793Z"
-                                                    fill="#A4A4A4" />
-                                            </g>
-                                            <defs>
-                                                <clipPath id="clip0_183_375">
-                                                    <rect width="24" height="24" fill="white"
-                                                        transform="translate(0.5 0.5)" />
-                                                </clipPath>
-                                            </defs>
-                                        </svg>
-                                    </span>
-                                </div>
-                            </div>
-                            <div
-                                class="p-[16px_24px] w-full flex items-center justify-between bg-[#FBFBFB] rounded-[8px] dark:bg-[#1B1C21] dark:text-white">
-                                <div class="w-[462px] flex items-center gap-[32px] justify-between">
-                                    <div class="flex gap-[15px] items-center w-full">
-                                        <img src="./image/img/ghana.png" alt="argentina.png">
-                                        <span>Ghana</span>
+                                        class="p-[16px_24px] w-full flex items-center justify-between rounded-[8px] dark:text-white">
+                                        <div class="w-[462px] flex items-center gap-[32px] justify-between">
+                                            <div class="flex gap-[15px] items-center w-full">
+                                                <img src="./image/img/portugal.png" alt="argentina.png">
+                                                <span>Portugal</span>
+                                            </div>
+                                            <div
+                                                class="flex items-center justify-center w-full rounded-[16px] text-[#5742A9] bg-[rgb(87,66,169,0.1)] h-[30px] dark:text-[#F5C451] dark:bg-[rgb(245,196,81,0.1)]">
+                                                2 - 3</div>
+                                            <div class="flex gap-[15px] items-center w-full justify-end">
+                                                <span>Belgium</span>
+                                                <img src="./image/img/belgium.png" alt="italy.png">
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="text-[#FA0E0E] bg-[rgb(250,14,14,0.1)] p-[8px_16px] rounded-[8px] dark:text-white dark:bg-[rgb(255,255,255,0.1)]">
+                                            <span>Full - Time</span>
+                                        </div>
+                                        <div class="flex items-center gap-[16px]">
+                                            <span class="text-[#636363] mr-[24px] dark:text-[#A4A4A4]">18 December
+                                                2022</span>
+                                            <span class="cursor-pointer">
+                                                <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <g clip-path="url(#clip0_183_372)">
+                                                        <path
+                                                            d="M12.5 22.5C6.977 22.5 2.5 18.023 2.5 12.5C2.5 6.977 6.977 2.5 12.5 2.5C18.023 2.5 22.5 6.977 22.5 12.5C22.5 18.023 18.023 22.5 12.5 22.5ZM12.5 20.5C14.6217 20.5 16.6566 19.6571 18.1569 18.1569C19.6571 16.6566 20.5 14.6217 20.5 12.5C20.5 10.3783 19.6571 8.34344 18.1569 6.84315C16.6566 5.34285 14.6217 4.5 12.5 4.5C10.3783 4.5 8.34344 5.34285 6.84315 6.84315C5.34285 8.34344 4.5 10.3783 4.5 12.5C4.5 14.6217 5.34285 16.6566 6.84315 18.1569C8.34344 19.6571 10.3783 20.5 12.5 20.5ZM11.5 7.5H13.5V9.5H11.5V7.5ZM11.5 11.5H13.5V17.5H11.5V11.5Z"
+                                                            fill="#A4A4A4" />
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_183_372">
+                                                            <rect width="24" height="24" fill="white"
+                                                                transform="translate(0.5 0.5)" />
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+                                            </span>
+                                            <span class="cursor-pointer">
+                                                <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <g clip-path="url(#clip0_183_375)">
+                                                        <path
+                                                            d="M5.53133 3.5V19.5H21.7819V21.5H3.5V3.5H5.53133ZM21.0639 6.793L22.5 8.207L16.7036 13.914L13.6566 10.915L9.29639 15.207L7.86024 13.793L13.6566 8.086L16.7036 11.085L21.0639 6.793Z"
+                                                            fill="#A4A4A4" />
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_183_375">
+                                                            <rect width="24" height="24" fill="white"
+                                                                transform="translate(0.5 0.5)" />
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+                                            </span>
+                                        </div>
                                     </div>
                                     <div
-                                        class="flex items-center justify-center w-full rounded-[16px] text-[#5742A9] bg-[rgb(87,66,169,0.1)] h-[30px] dark:text-[#F5C451] dark:bg-[rgb(245,196,81,0.1)]">
-                                        1 - 3</div>
-                                    <div class="flex gap-[15px] items-center w-full justify-end">
-                                        <span>Brazil</span>
-                                        <img src="./image/img/brazil.png" alt="italy.png">
+                                        class="p-[16px_24px] w-full flex items-center justify-between bg-[#FBFBFB] rounded-[8px] dark:bg-[#1B1C21] dark:text-white">
+                                        <div class="w-[462px] flex items-center gap-[32px] justify-between">
+                                            <div class="flex gap-[15px] items-center w-full">
+                                                <img src="./image/img/ghana.png" alt="argentina.png">
+                                                <span>Ghana</span>
+                                            </div>
+                                            <div
+                                                class="flex items-center justify-center w-full rounded-[16px] text-[#5742A9] bg-[rgb(87,66,169,0.1)] h-[30px] dark:text-[#F5C451] dark:bg-[rgb(245,196,81,0.1)]">
+                                                1 - 3</div>
+                                            <div class="flex gap-[15px] items-center w-full justify-end">
+                                                <span>Brazil</span>
+                                                <img src="./image/img/brazil.png" alt="italy.png">
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="text-[#FA0E0E] bg-[rgb(250,14,14,0.1)] p-[8px_16px] rounded-[8px] dark:text-white dark:bg-[rgb(255,255,255,0.1)]">
+                                            <span>Full - Time</span>
+                                        </div>
+                                        <div class="flex items-center gap-[16px]">
+                                            <span class="text-[#636363] mr-[24px] dark:text-[#A4A4A4]">17 December
+                                                2022</span>
+                                            <span class="cursor-pointer">
+                                                <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <g clip-path="url(#clip0_183_372)">
+                                                        <path
+                                                            d="M12.5 22.5C6.977 22.5 2.5 18.023 2.5 12.5C2.5 6.977 6.977 2.5 12.5 2.5C18.023 2.5 22.5 6.977 22.5 12.5C22.5 18.023 18.023 22.5 12.5 22.5ZM12.5 20.5C14.6217 20.5 16.6566 19.6571 18.1569 18.1569C19.6571 16.6566 20.5 14.6217 20.5 12.5C20.5 10.3783 19.6571 8.34344 18.1569 6.84315C16.6566 5.34285 14.6217 4.5 12.5 4.5C10.3783 4.5 8.34344 5.34285 6.84315 6.84315C5.34285 8.34344 4.5 10.3783 4.5 12.5C4.5 14.6217 5.34285 16.6566 6.84315 18.1569C8.34344 19.6571 10.3783 20.5 12.5 20.5ZM11.5 7.5H13.5V9.5H11.5V7.5ZM11.5 11.5H13.5V17.5H11.5V11.5Z"
+                                                            fill="#A4A4A4" />
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_183_372">
+                                                            <rect width="24" height="24" fill="white"
+                                                                transform="translate(0.5 0.5)" />
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+                                            </span>
+                                            <span class="cursor-pointer">
+                                                <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <g clip-path="url(#clip0_183_375)">
+                                                        <path
+                                                            d="M5.53133 3.5V19.5H21.7819V21.5H3.5V3.5H5.53133ZM21.0639 6.793L22.5 8.207L16.7036 13.914L13.6566 10.915L9.29639 15.207L7.86024 13.793L13.6566 8.086L16.7036 11.085L21.0639 6.793Z"
+                                                            fill="#A4A4A4" />
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_183_375">
+                                                            <rect width="24" height="24" fill="white"
+                                                                transform="translate(0.5 0.5)" />
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+                                            </span>
+                                        </div>
                                     </div>
                                 </div>
-                                <div
-                                    class="text-[#FA0E0E] bg-[rgb(250,14,14,0.1)] p-[8px_16px] rounded-[8px] dark:text-white dark:bg-[rgb(255,255,255,0.1)]">
-                                    <span>Full - Time</span>
-                                </div>
-                                <div class="flex items-center gap-[16px]">
-                                    <span class="text-[#636363] mr-[24px] dark:text-[#A4A4A4]">17 December
-                                        2022</span>
-                                    <span class="cursor-pointer">
-                                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <g clip-path="url(#clip0_183_372)">
-                                                <path
-                                                    d="M12.5 22.5C6.977 22.5 2.5 18.023 2.5 12.5C2.5 6.977 6.977 2.5 12.5 2.5C18.023 2.5 22.5 6.977 22.5 12.5C22.5 18.023 18.023 22.5 12.5 22.5ZM12.5 20.5C14.6217 20.5 16.6566 19.6571 18.1569 18.1569C19.6571 16.6566 20.5 14.6217 20.5 12.5C20.5 10.3783 19.6571 8.34344 18.1569 6.84315C16.6566 5.34285 14.6217 4.5 12.5 4.5C10.3783 4.5 8.34344 5.34285 6.84315 6.84315C5.34285 8.34344 4.5 10.3783 4.5 12.5C4.5 14.6217 5.34285 16.6566 6.84315 18.1569C8.34344 19.6571 10.3783 20.5 12.5 20.5ZM11.5 7.5H13.5V9.5H11.5V7.5ZM11.5 11.5H13.5V17.5H11.5V11.5Z"
-                                                    fill="#A4A4A4" />
-                                            </g>
-                                            <defs>
-                                                <clipPath id="clip0_183_372">
-                                                    <rect width="24" height="24" fill="white"
-                                                        transform="translate(0.5 0.5)" />
-                                                </clipPath>
-                                            </defs>
-                                        </svg>
-                                    </span>
-                                    <span class="cursor-pointer">
-                                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <g clip-path="url(#clip0_183_375)">
-                                                <path
-                                                    d="M5.53133 3.5V19.5H21.7819V21.5H3.5V3.5H5.53133ZM21.0639 6.793L22.5 8.207L16.7036 13.914L13.6566 10.915L9.29639 15.207L7.86024 13.793L13.6566 8.086L16.7036 11.085L21.0639 6.793Z"
-                                                    fill="#A4A4A4" />
-                                            </g>
-                                            <defs>
-                                                <clipPath id="clip0_183_375">
-                                                    <rect width="24" height="24" fill="white"
-                                                        transform="translate(0.5 0.5)" />
-                                                </clipPath>
-                                            </defs>
-                                        </svg>
-                                    </span>
-                                </div>
-                            </div>
-                               </div>
-                               <div id="Tab2" class="tabs__content-item"></div>
-                               <div id="Tab3" class="tabs__content-item"></div>
-                               <div id="Tab4" class="tabs__content-item"></div>
-                               <div id="Tab5" class="tabs__content-item"></div>
+                                <div id="Tab2" class="tabs__content-item"></div>
+                                <div id="Tab3" class="tabs__content-item"></div>
+                                <div id="Tab4" class="tabs__content-item"></div>
+                                <div id="Tab5" class="tabs__content-item"></div>
                             </div>
 
                         </section>
@@ -863,9 +860,9 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr class="bg-[#F2F0F9] text-black dark:bg-[#494069] dark:text-white">
-                                                <th scope="row"
-                                                    class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap flex items-center gap-[16px] dark:text-white">
+                                            <tr class="text-black dark:text-white">
+                                                <td scope="row"
+                                                    class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap flex items-center gap-[16px] dark:text-white dark:bg-[#494069]">
                                                     <span>1</span>
                                                     <div class="w-[32px] h-[32px]">
                                                         <img class="w-full h-full object-cover"
@@ -874,43 +871,45 @@
                                                     <span>
                                                         Chelsea F.C
                                                     </span>
-                                                </th>
-                                                <td class="px-6 py-4">
+                                                </td>
+                                                <td class="px-6 py-4 dark:bg-[#494069]">
                                                     14
                                                 </td>
-                                                <td class="px-6 py-4">
+                                                <td class="px-6 py-4 dark:bg-[#494069]">
                                                     3
                                                 </td>
-                                                <td class="px-6 py-4">
+                                                <td class="px-6 py-4 dark:bg-[#494069]">
                                                     1
                                                 </td>
-                                                <td class="px-6 py-4">
+                                                <td class="px-6 py-4 dark:bg-[#494069]">
                                                     35
                                                 </td>
-                                                <td class="px-6 py-4 flex items-center gap-[8px]">
-                                                    <span>
-                                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                                            xmlns="http://www.w3.org/2000/svg">
-                                                            <path
-                                                                d="M10 20C4.477 20 0 15.523 0 10C0 4.477 4.477 0 10 0C15.523 0 20 4.477 20 10C20 15.523 15.523 20 10 20ZM10 8.586L7.172 5.757L5.757 7.172L8.586 10L5.757 12.828L7.172 14.243L10 11.414L12.828 14.243L14.243 12.828L11.414 10L14.243 7.172L12.828 5.757L10 8.586Z"
-                                                                fill="#FF0000" />
-                                                        </svg>
+                                                <td class="px-6 py-4 dark:bg-[#494069]">
+                                                    <div class="flex items-cener gap-[8px]">
+                                                        <span>
+                                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                <path
+                                                                    d="M10 20C4.477 20 0 15.523 0 10C0 4.477 4.477 0 10 0C15.523 0 20 4.477 20 10C20 15.523 15.523 20 10 20ZM10 8.586L7.172 5.757L5.757 7.172L8.586 10L5.757 12.828L7.172 14.243L10 11.414L12.828 14.243L14.243 12.828L11.414 10L14.243 7.172L12.828 5.757L10 8.586Z"
+                                                                    fill="#FF0000" />
+                                                            </svg>
 
-                                                    </span>
-                                                    <span>
-                                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                                            xmlns="http://www.w3.org/2000/svg">
-                                                            <path
-                                                                d="M10 20C4.477 20 0 15.523 0 10C0 4.477 4.477 0 10 0C15.523 0 20 4.477 20 10C20 15.523 15.523 20 10 20ZM9.003 14L16.073 6.929L14.659 5.515L9.003 11.172L6.174 8.343L4.76 9.757L9.003 14Z"
-                                                                fill="#24A700" />
-                                                        </svg>
+                                                        </span>
+                                                        <span>
+                                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                <path
+                                                                    d="M10 20C4.477 20 0 15.523 0 10C0 4.477 4.477 0 10 0C15.523 0 20 4.477 20 10C20 15.523 15.523 20 10 20ZM9.003 14L16.073 6.929L14.659 5.515L9.003 11.172L6.174 8.343L4.76 9.757L9.003 14Z"
+                                                                    fill="#24A700" />
+                                                            </svg>
 
-                                                    </span>
+                                                        </span>
+                                                    </div>
                                                 </td>
                                             </tr>
-                                            <tr class="bg-[#F2F0F9] text-black dark:bg-[#494069] dark:text-white">
-                                                <th scope="row"
-                                                    class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap flex items-center gap-[16px] dark:text-white">
+                                            <tr class="text-black dark:text-white">
+                                                <td scope="row"
+                                                    class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap flex items-center gap-[16px] dark:text-white dark:bg-[#494069]">
                                                     <span>2</span>
                                                     <div class="w-[32px] h-[32px]">
                                                         <img class="w-full h-full object-cover"
@@ -919,43 +918,45 @@
                                                     <span>
                                                         Manchester City
                                                     </span>
-                                                </th>
-                                                <td class="px-6 py-4">
+                                                </td>
+                                                <td class="px-6 py-4 dark:bg-[#494069]">
                                                     14
                                                 </td>
-                                                <td class="px-6 py-4">
+                                                <td class="px-6 py-4 dark:bg-[#494069]">
                                                     3
                                                 </td>
-                                                <td class="px-6 py-4">
+                                                <td class="px-6 py-4 dark:bg-[#494069]">
                                                     1
                                                 </td>
-                                                <td class="px-6 py-4">
+                                                <td class="px-6 py-4 dark:bg-[#494069]">
                                                     35
                                                 </td>
-                                                <td class="px-6 py-4 flex items-center gap-[8px]">
-                                                    <span>
-                                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                                            xmlns="http://www.w3.org/2000/svg">
-                                                            <path
-                                                                d="M10 20C4.477 20 0 15.523 0 10C0 4.477 4.477 0 10 0C15.523 0 20 4.477 20 10C20 15.523 15.523 20 10 20ZM10 8.586L7.172 5.757L5.757 7.172L8.586 10L5.757 12.828L7.172 14.243L10 11.414L12.828 14.243L14.243 12.828L11.414 10L14.243 7.172L12.828 5.757L10 8.586Z"
-                                                                fill="#FF0000" />
-                                                        </svg>
+                                                <td class="px-6 py-4 dark:bg-[#494069]">
+                                                    <div class="flex items-cener gap-[8px]">
+                                                        <span>
+                                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                <path
+                                                                    d="M10 20C4.477 20 0 15.523 0 10C0 4.477 4.477 0 10 0C15.523 0 20 4.477 20 10C20 15.523 15.523 20 10 20ZM10 8.586L7.172 5.757L5.757 7.172L8.586 10L5.757 12.828L7.172 14.243L10 11.414L12.828 14.243L14.243 12.828L11.414 10L14.243 7.172L12.828 5.757L10 8.586Z"
+                                                                    fill="#FF0000" />
+                                                            </svg>
 
-                                                    </span>
-                                                    <span>
-                                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                                            xmlns="http://www.w3.org/2000/svg">
-                                                            <path
-                                                                d="M10 20C4.477 20 0 15.523 0 10C0 4.477 4.477 0 10 0C15.523 0 20 4.477 20 10C20 15.523 15.523 20 10 20ZM9.003 14L16.073 6.929L14.659 5.515L9.003 11.172L6.174 8.343L4.76 9.757L9.003 14Z"
-                                                                fill="#24A700" />
-                                                        </svg>
+                                                        </span>
+                                                        <span>
+                                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                <path
+                                                                    d="M10 20C4.477 20 0 15.523 0 10C0 4.477 4.477 0 10 0C15.523 0 20 4.477 20 10C20 15.523 15.523 20 10 20ZM9.003 14L16.073 6.929L14.659 5.515L9.003 11.172L6.174 8.343L4.76 9.757L9.003 14Z"
+                                                                    fill="#24A700" />
+                                                            </svg>
 
-                                                    </span>
+                                                        </span>
+                                                    </div>
                                                 </td>
                                             </tr>
-                                            <tr class="bg-[#F2F0F9] text-black dark:bg-[#412E2E] dark:text-white">
-                                                <th scope="row"
-                                                    class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap flex items-center gap-[16px] dark:text-white">
+                                            <tr class="text-black dark:text-white">
+                                                <td scope="row"
+                                                    class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap flex items-center gap-[16px] dark:text-white dark:bg-[#494069]">
                                                     <span>3</span>
                                                     <div class="w-[32px] h-[32px]">
                                                         <img class="w-full h-full object-cover"
@@ -964,38 +965,40 @@
                                                     <span>
                                                         Bayern Munchen
                                                     </span>
-                                                </th>
-                                                <td class="px-6 py-4">
+                                                </td>
+                                                <td class="px-6 py-4 dark:bg-[#494069]">
                                                     14
                                                 </td>
-                                                <td class="px-6 py-4">
+                                                <td class="px-6 py-4 dark:bg-[#494069]">
                                                     3
                                                 </td>
-                                                <td class="px-6 py-4">
+                                                <td class="px-6 py-4 dark:bg-[#494069]">
                                                     1
                                                 </td>
-                                                <td class="px-6 py-4">
+                                                <td class="px-6 py-4 dark:bg-[#494069]">
                                                     35
                                                 </td>
-                                                <td class="px-6 py-4 flex items-center gap-[8px]">
-                                                    <span>
-                                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                                            xmlns="http://www.w3.org/2000/svg">
-                                                            <path
-                                                                d="M10 20C4.477 20 0 15.523 0 10C0 4.477 4.477 0 10 0C15.523 0 20 4.477 20 10C20 15.523 15.523 20 10 20ZM10 8.586L7.172 5.757L5.757 7.172L8.586 10L5.757 12.828L7.172 14.243L10 11.414L12.828 14.243L14.243 12.828L11.414 10L14.243 7.172L12.828 5.757L10 8.586Z"
-                                                                fill="#FF0000" />
-                                                        </svg>
+                                                <td class="px-6 py-4 dark:bg-[#494069]">
+                                                    <div class="flex items-cener gap-[8px]">
+                                                        <span>
+                                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                <path
+                                                                    d="M10 20C4.477 20 0 15.523 0 10C0 4.477 4.477 0 10 0C15.523 0 20 4.477 20 10C20 15.523 15.523 20 10 20ZM10 8.586L7.172 5.757L5.757 7.172L8.586 10L5.757 12.828L7.172 14.243L10 11.414L12.828 14.243L14.243 12.828L11.414 10L14.243 7.172L12.828 5.757L10 8.586Z"
+                                                                    fill="#FF0000" />
+                                                            </svg>
 
-                                                    </span>
-                                                    <span>
-                                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                                            xmlns="http://www.w3.org/2000/svg">
-                                                            <path
-                                                                d="M10 20C4.477 20 0 15.523 0 10C0 4.477 4.477 0 10 0C15.523 0 20 4.477 20 10C20 15.523 15.523 20 10 20ZM9.003 14L16.073 6.929L14.659 5.515L9.003 11.172L6.174 8.343L4.76 9.757L9.003 14Z"
-                                                                fill="#24A700" />
-                                                        </svg>
+                                                        </span>
+                                                        <span>
+                                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                <path
+                                                                    d="M10 20C4.477 20 0 15.523 0 10C0 4.477 4.477 0 10 0C15.523 0 20 4.477 20 10C20 15.523 15.523 20 10 20ZM9.003 14L16.073 6.929L14.659 5.515L9.003 11.172L6.174 8.343L4.76 9.757L9.003 14Z"
+                                                                    fill="#24A700" />
+                                                            </svg>
 
-                                                    </span>
+                                                        </span>
+                                                    </div>
                                                 </td>
                                             </tr>
                                         </tbody>
