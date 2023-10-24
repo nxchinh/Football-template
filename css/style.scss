@@ -31,6 +31,16 @@ input,select{vertical-align:middle}
     }
 }
 
+.meunu__select-item {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease-in-out;
+}
+
+.meunu__select-item.active {
+    max-height: 200px;
+}
+
 .active {
     a {
      border-bottom: 2px solid #5742A9;
