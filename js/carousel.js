@@ -60,16 +60,6 @@ jQuery(function ($) {
 
             $('#shopping_next').click(function () {
                 $('.shopping .owl-carousel').trigger('next.owl.carousel');
-<<<<<<< HEAD
-            })
-            
-            $('#shopping_prev').click(function() {
-                $('.shopping .owl-carousel').trigger('prev.owl.carousel', [300]);
-            })
-        },
-
-        ready: function() {
-=======
             });
 
             $('#shopping_prev').click(function () {
@@ -78,7 +68,6 @@ jQuery(function ($) {
         },
 
         ready: function () {
->>>>>>> edd6ea9b2eb1296279647e91e9c08860fc84f5d1
             UI.slider();
         },
     }
@@ -116,27 +105,14 @@ jQuery(function ($) {
         }
     });
 
-<<<<<<< HEAD
-    const menuSelect = document.querySelector(".meunu__select");
-
-    const selectItem = document.querySelector(".meunu__select-item")
-
-    menuSelect.addEventListener('click',() => {
-=======
     const menuSelect = document.querySelector(".menu__select");
     const selectItem = document.querySelector(".menu__select-item");
 
     menuSelect.addEventListener('click', () => {
->>>>>>> edd6ea9b2eb1296279647e91e9c08860fc84f5d1
         if (selectItem.classList.contains('active')) {
             selectItem.classList.remove('active');
         } else {
             selectItem.classList.add('active');
         }
     });
-<<<<<<< HEAD
-    
-=======
-
->>>>>>> edd6ea9b2eb1296279647e91e9c08860fc84f5d1
 });
