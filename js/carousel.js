@@ -1,8 +1,8 @@
-jQuery(function($) {
+jQuery(function ($) {
 
 
     let UI = {
-        slider: function() {
+        slider: function () {
 
             $('#owl-company').owlCarousel({
                 margin: 30,
@@ -13,7 +13,7 @@ jQuery(function($) {
                 autoplayTimeout: 4000,
                 smartSpeed: 1000,
                 mouseDrag: true,
-                loop:true,
+                loop: true,
                 responsive: {
                     0: {
                         items: 1
@@ -27,11 +27,11 @@ jQuery(function($) {
                 }
             });
 
-            $('#next').click(function() {
+            $('#next').click(function () {
                 $('#owl-company').trigger('next.owl.carousel');
             })
-            
-            $('#prev').click(function() {
+
+            $('#prev').click(function () {
                 $('#owl-company').trigger('prev.owl.carousel', [300]);
             })
 
@@ -44,7 +44,7 @@ jQuery(function($) {
                 autoplayTimeout: 3000,
                 smartSpeed: 1000,
                 mouseDrag: true,
-                loop:true,
+                loop: true,
                 responsive: {
                     0: {
                         items: 1
@@ -58,8 +58,9 @@ jQuery(function($) {
                 }
             });
 
-            $('#shopping_next').click(function() {
+            $('#shopping_next').click(function () {
                 $('.shopping .owl-carousel').trigger('next.owl.carousel');
+<<<<<<< HEAD
             })
             
             $('#shopping_prev').click(function() {
@@ -68,6 +69,16 @@ jQuery(function($) {
         },
 
         ready: function() {
+=======
+            });
+
+            $('#shopping_prev').click(function () {
+                $('.shopping .owl-carousel').trigger('prev.owl.carousel', [300]);
+            });
+        },
+
+        ready: function () {
+>>>>>>> edd6ea9b2eb1296279647e91e9c08860fc84f5d1
             UI.slider();
         },
     }
@@ -105,16 +116,27 @@ jQuery(function($) {
         }
     });
 
+<<<<<<< HEAD
     const menuSelect = document.querySelector(".meunu__select");
 
     const selectItem = document.querySelector(".meunu__select-item")
 
     menuSelect.addEventListener('click',() => {
+=======
+    const menuSelect = document.querySelector(".menu__select");
+    const selectItem = document.querySelector(".menu__select-item");
+
+    menuSelect.addEventListener('click', () => {
+>>>>>>> edd6ea9b2eb1296279647e91e9c08860fc84f5d1
         if (selectItem.classList.contains('active')) {
             selectItem.classList.remove('active');
         } else {
             selectItem.classList.add('active');
         }
     });
+<<<<<<< HEAD
     
+=======
+
+>>>>>>> edd6ea9b2eb1296279647e91e9c08860fc84f5d1
 });

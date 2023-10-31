@@ -1,7 +1,76 @@
+@charset "UTF-8";
 /*
 *  html5resetcss
 */
-html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -15,7 +84,17 @@ body {
   line-height: 1;
 }
 
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
   display: block;
 }
 
@@ -23,11 +102,15 @@ nav ul {
   list-style: none;
 }
 
-blockquote, q {
+blockquote,
+q {
   quotes: none;
 }
 
-blockquote:before, blockquote:after, q:before, q:after {
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
   content: none;
 }
 
@@ -56,7 +139,8 @@ del {
   text-decoration: line-through;
 }
 
-abbr[title], dfn[title] {
+abbr[title],
+dfn[title] {
   border-bottom: 1px dotted;
   cursor: help;
 }
@@ -75,7 +159,8 @@ hr {
   padding: 0;
 }
 
-input, select {
+input,
+select {
   vertical-align: middle;
 }
 
@@ -91,14 +176,38 @@ input, select {
   margin: -15px;
 }
 
+<<<<<<< HEAD
 .meunu__select-item {
+=======
+.menu__select-item {
+>>>>>>> edd6ea9b2eb1296279647e91e9c08860fc84f5d1
   overflow: hidden;
   max-height: 0;
   transition: max-height 0.3s ease-in-out;
 }
 
+<<<<<<< HEAD
 .meunu__select-item.active {
   max-height: 200px;
+=======
+.menu__select-item.active {
+  max-height: 280px;
+  /* Điều chỉnh giá trị max-height theo nhu cầu của bạn */
+}
+
+td {
+  background-color: #F2F0F9;
+}
+
+td:first-child {
+  border-top-left-radius: 11px;
+  border-bottom-left-radius: 11px;
+}
+
+td:last-child {
+  border-bottom-right-radius: 11px;
+  border-top-right-radius: 11px;
+>>>>>>> edd6ea9b2eb1296279647e91e9c08860fc84f5d1
 }
 
 .active a {
